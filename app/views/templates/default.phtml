@@ -1,0 +1,13 @@
+{RenderView: shared/header}
+
+<?php
+if(isset($data["errors"])) {
+    foreach($data["errors"] as $error) {
+        echo '<div class="alert alert-danger"><strong>'.$lang['caption_error'].'</strong> '.$error.'</div>';
+    }
+}
+?>
+
+{RenderBody}
+
+{RenderView: shared/footer}
