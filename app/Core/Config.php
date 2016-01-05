@@ -65,7 +65,7 @@ class Config
         /**
          * Database name.
          */
-        define('DB_NAME', 'dbname');
+        define('DB_NAME', 'zeilschooldewaai');
 
         /**
          * Database username.
@@ -75,7 +75,7 @@ class Config
         /**
          * Database password.
          */
-        define('DB_PASS', 'password');
+        define('DB_PASS', '');
 
         /**
          * PREFER to be used in database calls default is smvc_
@@ -90,7 +90,7 @@ class Config
         /**
          * Optional create a constant for the name of the site.
          */
-        define('SITETITLE', 'V2.2');
+        define('SITETITLE', 'Zeilschool de Waai');
 
         /**
          * Optionall set a site email address.
