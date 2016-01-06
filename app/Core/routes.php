@@ -18,6 +18,7 @@ Router::any('home', 'Controllers\Home@index');
 
 /* Boten sectie */
 Router::any('boten', 'Controllers\Boten@index');
+Router::any('contact', 'Controllers\Contact@index');
 
 
 /** Module routes. */

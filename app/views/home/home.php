@@ -7,48 +7,6 @@ use Core\Language;
 
 ?>
 
-<style>
-
-.sidebar_image{
-	max-width:100%;
-	height:auto;
-	display:block;
-	border-radius:4px;
-	border:3px solid #1976d2;
-}
-
-.sidebar{
-	padding-top:50px;
-	padding-bottom:50px;
-}
-
-
-.sidebar_list{
-	list-style-type: none;
-	padding-left:10px;
-	font-size:17px;
-}
-
-.sidebar_list i{
-	color:#1976d2;
-}
-
-hr{
-	margin-top:0px;
-	margin-bottom:10px;
-}
-
-.home_map{
-	max-width:100%;
-	width:400px;
-	height:250px;
-	display:block;
-}
-
-</style>
-
-
-
 
 
 <div class="col-md-8">

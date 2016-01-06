@@ -63,6 +63,7 @@ $hooks->run('afterBody');
 			<a href="home"><div class="NavItem <?php if($data['title'] == 'Home'){echo 'active';} ?>">Home</div></a>
 			<a href="boten"><div class="NavItem <?php if($data['title'] == 'Boten'){echo 'active';} ?>">Boten</div></a>
 			<a href="cursussen"><div class="NavItem">Cursussen</div></a>
+			<a href="contact"><div class="NavItem <?php if($data['title'] == 'Contact'){echo 'active';} ?>">Contact</div></a>
 		</div>
 		<div class="Right">
 			<a href="login"><div class="NavItem <?php if($data['title'] == 'Login'){echo 'active';} ?>"><i class="fa fa-lock"></i> Ik ben al klant</div></a>
