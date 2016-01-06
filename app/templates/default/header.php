@@ -69,6 +69,16 @@ $hooks->run('afterBody');
 			<a href="registreren"><div class="NavItem <?php if($data['title'] == 'Registeren'){echo 'active';} ?>"><i class="fa fa-info-circle"></i> Klant worden</div></a>
 			<!--<i class="fa fa-lock"></i>-->
 		</div>
+		<div id="ResponsiveLogo">Zeilschool De Waai</div>
+		<div id="ResponsiveTrigger"></div>
+	</div>
+	<div class="responsiveMenu">
+		<div class="ResponsiveItem">Home</div>
+		<div class="ResponsiveItem">Boten</div>
+		<div class="ResponsiveItem">Cursussen</div>
+		<div class="ResponsiveItem">Inloggen</div>
+		<div class="ResponsiveItem">Registreren</div>
+
 	</div>
 </div>
 <div class="container page">

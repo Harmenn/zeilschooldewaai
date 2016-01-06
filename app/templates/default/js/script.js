@@ -14,3 +14,9 @@ jQuery("document").ready(function($) {
 $('.carousel').carousel({
     interval: 5000
 })
+
+$( "#ResponsiveTrigger" ).click(function() {
+    $( ".responsiveMenu" ).slideToggle( "200", function() {
+        // Animation complete.
+    });
+});
