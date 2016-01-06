@@ -112,12 +112,7 @@ class Config
          * Start sessions.
          */
         Session::init();
+    
     }
-        try {
-        parent::__construct(DB_TYPE.':host='.DB_HOST.'; dbname='.DB_NAME,DB_USER,DB_PASS);
-        $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            Logger::newMessage($e);
-            customErrorMsg();
-        }
+
 }
