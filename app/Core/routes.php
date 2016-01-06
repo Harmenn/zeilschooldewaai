@@ -21,6 +21,9 @@ Router::any('boten', 'Controllers\Boten@index');
 Router::any('contact', 'Controllers\Contact@index');
 
 
+/* User sectie */
+Router::any('login', 'Controllers\Login@index');
+
 /** Module routes. */
 $hooks = Hooks::get();
 $hooks->run('routes');
