@@ -26,6 +26,7 @@ $hooks = Hooks::get();
 	<?php
 	Assets::css(array(
 		'//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+		'//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
 		Url::templatePath() . 'css/header.css',
 		Url::templatePath() . 'css/footer.css',
 
@@ -44,6 +45,9 @@ $hooks->run('afterBody');
 
 
 <!-- Header -->
+<div id="HeaderImg">
+
+</div>
 <div id="navbar">
 	<div class="container">
 		<div id="NavItemsLeft">
