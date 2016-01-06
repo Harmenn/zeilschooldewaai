@@ -6,7 +6,7 @@ jQuery("document").ready(function($) {
             nav.css('top','0px');
         } else {
             nav.css('position', 'absolute');
-            nav.css('top','160px');
+            nav.css('top','200px');
         }
     });
 });
