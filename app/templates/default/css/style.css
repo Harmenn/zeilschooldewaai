@@ -28,6 +28,7 @@
 	text-align: center;
 }
 
+<<<<<<< HEAD
 .sidebar_image{
 	max-width:100%;
 	height:auto;
@@ -63,3 +64,86 @@ hr{
 	height:250px;
 	display:block;
 }
+=======
+/* Boten sectie
+----------------------------------------------------------------- */
+.BootType h2{
+	text-align: center;
+}
+
+.BootType img{
+	border-radius : 6px;
+	margin-bottom: 20px;
+}
+
+.BootType p{
+	text-align: justify;
+}
+
+/* Responsive
+----------------------------------------------------------------- */
+@media screen and (max-width: 992px){
+	.BootType h2{
+		text-align: left;
+	}
+	.BootType img{
+		width: 200px;
+		border-radius : 3px;
+		margin-bottom: 20px;
+		width: 20%;
+		float: left;
+	}
+	.BootType p{
+		float: left;
+		margin-left: 2%;
+		width: 78%;
+	}
+	.BootType{
+		border-bottom: 1px solid #ddd;
+
+	}
+
+
+}
+@media screen and (max-width: 650px) {
+	.BootType h2{
+		text-align: left;
+	}
+	.BootType img{
+		border-radius : 3px;
+		margin-bottom: 20px;
+		width: 40%;
+		float: left;
+	}
+	.BootType p{
+		float: left;
+		margin-left: 2%;
+		width: 58%;
+	}
+}
+@media screen and (max-width: 650px) {
+	.BootType h2{
+		text-align: left;
+		float: right;
+		width: 60%;
+		padding-left: 10px;
+		box-sizing: border-box;
+	}
+	.BootType img{
+		border-radius : 3px;
+		margin-bottom: 20px;
+		width: 40%;
+		float: left;
+		margin-top: 20px;
+	}
+	.BootType p{
+		width: 100%;
+		margin: 0px;
+		text-align: justify;
+	}
+	.BootType{
+		box-sizing: border-box;
+		padding: 10px;
+	}
+}
+>>>>>>> origin/master
