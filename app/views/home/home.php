@@ -8,7 +8,10 @@ use Core\Language;
 ?>
 
 <div class="page-header">
-	<h1><?php echo $data['title'] ?></h1>
+	<h1>Home pagina</h1>
 </div>
 
-<p><?php echo $data['home_message'] ?></p>
+<p>
+Welkom op de homepagina van zeilschool de Waai.<br/>
+Ga verder via het menu hierboven.
+</p>
