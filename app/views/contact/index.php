@@ -48,7 +48,15 @@ use Core\Language;
 				<?php 
 			}else{
 				echo '<br><div class="alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Succesvol.</strong><br>Het contactformulier is succesvol verzonden, we nemen binnen 24 uur contact met u op.</div>';
-				// Hier kan mail ingesteld worden.
+				
+				$mail = new \Helpers\PhpMailer\Mail();
+				$mail->setFrom('noreply@zeilschooldewaai.nl');
+				$mail->addAddress($email);
+				$mail->subject('Contactformulier');
+				$mail->body("<h1>Contactformulier</h1><p>U heeft het contactformulier ingevuld.</p>");
+				$mail->send();
+
+
 			}
 		}else{
 			?>
