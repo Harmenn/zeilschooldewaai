@@ -26,7 +26,9 @@ $hooks = Hooks::get();
 	<?php
 	Assets::css(array(
 		'//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-		Url::templatePath() . 'css/style.css',
+		Url::templatePath() . 'css/header.css',
+		Url::templatePath() . 'css/footer.css',
+
 	));
 
 	//hook for plugging in css
@@ -40,4 +42,15 @@ $hooks = Hooks::get();
 $hooks->run('afterBody');
 ?>
 
+
+<!-- Header -->
+<div id="navbar">
+	<div class="container">
+		<div id="NavItemsLeft">
+			<div class="NavItem active">Home</div>
+			<div class="NavItem">Boten</div>
+			<div class="NavItem">Cursussen</div>
+		</div>
+	</div>
+</div>
 <div class="container">
