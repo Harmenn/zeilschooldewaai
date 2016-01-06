@@ -25,7 +25,7 @@ class Boten extends Controller
 
     public function index()
     {
-        $data['title'] = $this->language->get('Boten pagina');
+        $data['title'] = $this->language->get('Boten');
         $data['home_message'] = $this->language->get('no message');
 
         View::renderTemplate('header', $data);

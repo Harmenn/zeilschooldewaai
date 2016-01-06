@@ -60,8 +60,8 @@ $hooks->run('afterBody');
 <div id="navbar">
 	<div class="container">
 		<div class="Left">
-			<a href="home"><div class="NavItem <?php if($data['title'] == 'homepage'){echo 'active';} ?>">Home</div></a>
-			<a href="boten"><div class="NavItem <?php if($data['title'] == 'boten'){echo 'active';} ?>">Boten</div></a>
+			<a href="home"><div class="NavItem <?php if($data['title'] == 'Home'){echo 'active';} ?>">Home</div></a>
+			<a href="boten"><div class="NavItem <?php if($data['title'] == 'Boten'){echo 'active';} ?>">Boten</div></a>
 			<a href="cursussen"><div class="NavItem">Cursussen</div></a>
 		</div>
 		<div class="Right">

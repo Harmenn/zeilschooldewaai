@@ -8,9 +8,9 @@ use Core\Language;
 ?>
 
 <div class="page-header">
-	<h1>Boten pagina</h1>
+	<h1 style="text-align: center">Onze vloot</h1>
 </div>
 
 <p>
-Boten
+
 </p>

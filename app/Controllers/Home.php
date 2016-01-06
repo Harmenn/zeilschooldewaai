@@ -30,7 +30,7 @@ class Home extends Controller
 
     public function index()
     {
-        $data['title'] = $this->language->get('home_text');
+        $data['title'] = $this->language->get('Home');
         $data['home_message'] = $this->language->get('home_message');
 
         View::renderTemplate('header', $data);
