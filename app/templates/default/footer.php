@@ -23,13 +23,17 @@ $hooks = Hooks::get();
 		</div>
 		<div class="container">
 			<div class="col-md-4">
-				<h2>Over het bedrijf</h2>
+				<h2>In het kort</h2><hr>
+				<p>Zeilschool de Waai is een zeilschool waar voornamelijk cursussen worden gehouden. U kan zich gemakkelijk aanmelden voor een cursus en ook welk niveau. Aan elk niveau wordt automatisch een boot toegevoegd. Hopelijk tot snel.</p>
 			</div>
 			<div class="col-md-4">
-				<h2>Links</h2>
+				<img src="/zeilschooldewaai/app/templates/default/img/logo.png" id="Logo" /><br>
+				&copy; <?php echo date('Y'); ?> Zeilschool de Waai.<br>
+				Alle rechten voorbehouden.
 			</div>
 			<div class="col-md-4">
-				<h2>Adres gegevens</h2>
+				<h2>Contact opnemen</h2><hr>
+				<p>Heeft u vragen of opmerkingen? Dat horen wij graag en lossen het ook graag op. Neem contact op via het contactformulier op de contact pagina, <a href="contact">klik hier.</a></p>
 			</div>
 		</div>
 

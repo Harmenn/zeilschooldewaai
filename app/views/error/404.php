@@ -10,14 +10,11 @@ use Core\Error;
 	<div class="row">
 		<div class="col-md-12">
 
-			<h1>404</h1>
-
-			<?php echo $data['error'];?>
+			<h1>404 - Pagina niet gevonden.</h1>
 
 			<hr />
 
-			<h3>De pagina die jij wou bekijken is niet gevonden.</h3>
-			<p>Dit is waarschijnlijk gebeurd omdat de pagina verwijderd is of een naam verandering heeft.</p>
+			<p>De pagina die jij wou bezoeken bestaat niet meer of is verplaatst. <a href="home">Klik hier</a> om terug te gaan naar de home pagina.</p>
 
 		</div>
 	</div>

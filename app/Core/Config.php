@@ -114,5 +114,8 @@ class Config
         Session::init();
     
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 }
