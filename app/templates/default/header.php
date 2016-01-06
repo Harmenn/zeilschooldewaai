@@ -29,6 +29,7 @@ $hooks = Hooks::get();
 		'//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
 		Url::templatePath() . 'css/header.css',
 		Url::templatePath() . 'css/footer.css',
+		Url::templatePath() . 'css/style.css'
 
 	));
 
@@ -70,4 +71,4 @@ $hooks->run('afterBody');
 		</div>
 	</div>
 </div>
-<div class="container">
+<div class="container page">
