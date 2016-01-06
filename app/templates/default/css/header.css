@@ -62,3 +62,57 @@
 .NavItem.active{
     background: #42a5f5;
 }
+
+.responsiveMenu{
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 2px solid #1976d2;
+}
+
+.ResponsiveItem{
+    line-height: 35px;
+    font-weight: 600;
+    width: 100%;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #1976d2;
+    cursor: pointer;
+    transition: .1s;
+}
+.ResponsiveItem:hover{
+    background-color: #42a5f5;
+    color: #fff;
+}
+
+#ResponsiveTrigger{
+    display: none;
+    float: right;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('http://alexandstein.com/resources/images/icons/hamburger.png') no-repeat center;
+    background-size: cover;
+}
+#ResponsiveLogo{
+    display: none;
+    float: left;
+    line-height: 40px;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 550px){
+    #navbar .container .Left, #navbar .container .Right{
+        display: none;
+    }
+    #ResponsiveTrigger, #ResponsiveLogo{
+        display: block;
+    }
+
+}
