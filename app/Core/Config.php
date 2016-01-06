@@ -112,5 +112,10 @@ class Config
          * Start sessions.
          */
         Session::init();
+    
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
 }
