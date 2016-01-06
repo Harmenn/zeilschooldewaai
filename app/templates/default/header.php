@@ -65,8 +65,8 @@ $hooks->run('afterBody');
 			<a href="cursussen"><div class="NavItem">Cursussen</div></a>
 		</div>
 		<div class="Right">
-			<a href="login"><div class="NavItem"><i class="fa fa-lock"></i> Ik ben al klant</div></a>
-			<a href="registreren"><div class="NavItem"><i class="fa fa-info-circle"></i> Klant worden</div></a>
+			<a href="login"><div class="NavItem <?php if($data['title'] == 'Login'){echo 'active';} ?>"><i class="fa fa-lock"></i> Ik ben al klant</div></a>
+			<a href="registreren"><div class="NavItem <?php if($data['title'] == 'Registeren'){echo 'active';} ?>"><i class="fa fa-info-circle"></i> Klant worden</div></a>
 			<!--<i class="fa fa-lock"></i>-->
 		</div>
 	</div>
