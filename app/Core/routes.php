@@ -13,6 +13,12 @@ use Helpers\Hooks;
 
 /** Define routes. */
 Router::any('', 'Controllers\Home@index');
+Router::any('home', 'Controllers\Home@index');
+
+
+/* Boten sectie */
+Router::any('boten', 'Controllers\Boten@index');
+
 
 /** Module routes. */
 $hooks = Hooks::get();
