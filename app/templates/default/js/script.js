@@ -20,3 +20,8 @@ $( "#ResponsiveTrigger" ).click(function() {
         // Animation complete.
     });
 });
+
+function ChangeContent(content){
+    $(".BootSubject").fadeOut( "300", function() {  });
+    $("#" + content).delay("300").fadeIn( "300", function() {  });
+}

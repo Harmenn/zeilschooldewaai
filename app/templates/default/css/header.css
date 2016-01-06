@@ -114,5 +114,14 @@
     #ResponsiveTrigger, #ResponsiveLogo{
         display: block;
     }
+}
 
+/* style.css */
+#boten_sideImg{
+    width: 100%;
+    border-radius: 6px;
+}
+
+#BootTypes{
+    display: none;
 }
