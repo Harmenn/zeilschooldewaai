@@ -37,7 +37,7 @@ class Config
         /**
          * Set default controller and method for legacy calls.
          */
-        define('DEFAULT_CONTROLLER', 'welcome');
+        define('DEFAULT_CONTROLLER', 'home');
         define('DEFAULT_METHOD', 'index');
 
         /**
