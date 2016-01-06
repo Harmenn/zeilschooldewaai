@@ -14,6 +14,7 @@ use Core\Language;
     <li role="presentation" class="active"><a href="#OnzeVloot" onclick="ChangeContent('OnzeVloot')" role="tab" data-toggle="tab">Onze vloot</a></li>
     <li role="presentation"><a href="#Soorten" role="tab"  onclick="ChangeContent('BootTypes')" data-toggle="tab">Soorten Boten</a></li>
 </ul>
+
 <div id="OnzeVloot" class="BootSubject">
     <div class="page-header">
         <h1 style="text-align: center">Onze vloot</h1>

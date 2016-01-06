@@ -22,6 +22,11 @@ $( "#ResponsiveTrigger" ).click(function() {
 });
 
 function ChangeContent(content){
-    $(".BootSubject").fadeOut( "300", function() {  });
-    $("#" + content).delay("300").fadeIn( "300", function() {  });
+    $(".BootSubject").fadeOut( "300", function() {
+        // Animation complete.
+    });
+    $("#" + content).delay('300').fadeIn( "300", function() {
+        // Animation complete.
+    });
+
 }
