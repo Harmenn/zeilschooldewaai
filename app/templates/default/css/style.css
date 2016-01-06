@@ -28,7 +28,8 @@
 	text-align: center;
 }
 
-<<<<<<< HEAD
+/* BEGIN HOME CODE */
+
 .sidebar_image{
 	max-width:100%;
 	height:auto;
@@ -64,7 +65,11 @@ hr{
 	height:250px;
 	display:block;
 }
-=======
+
+
+/* END HOME CODE */
+
+
 /* Boten sectie
 ----------------------------------------------------------------- */
 .BootType h2{
