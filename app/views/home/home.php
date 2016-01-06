@@ -68,7 +68,7 @@ hr{
 	<hr>
 	<ul class="sidebar_list">
 		<li><i class="fa fa-check"></i> Goed te vinden</li>
-		<li><i class="fa fa-check"></i> Cursusen</li>
+		<li><i class="fa fa-check"></i> Cursussen</li>
 		<li><i class="fa fa-check"></i> Verschillende niveaus</li>
 		<li><i class="fa fa-check"></i> Betaalbare prijs</li>
 	</ul>

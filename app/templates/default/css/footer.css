@@ -44,3 +44,20 @@
 #footer .top-footer .title .button{
 	margin-left:20px;
 }
+
+
+@media(max-width:800px){
+
+	#footer .top-footer .button{
+		margin-left:auto !important;
+		margin-right:auto;
+		margin-top:20px;
+	}
+
+	#footer .top-footer:after{
+		display:none;
+	}
+
+
+
+}
