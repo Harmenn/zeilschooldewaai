@@ -29,7 +29,7 @@ $hooks = Hooks::get();
 		'//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
 		Url::templatePath() . 'css/header.css',
 		Url::templatePath() . 'css/footer.css',
-		Url::templatePath() . 'css/style.css'
+		Url::templatePath() . 'css/style.css',
 
 	));
 
@@ -60,9 +60,9 @@ $hooks->run('afterBody');
 <div id="navbar">
 	<div class="container">
 		<div class="Left">
-			<div class="NavItem active">Home</div>
-			<div class="NavItem">Boten</div>
-			<div class="NavItem">Cursussen</div>
+			<a href="/"><div class="NavItem active">Home</div></a>
+			<a href="/boten"><div class="NavItem">Boten</div></a>
+			<a href="/cursussen"><div class="NavItem">Cursussen</div></a>
 		</div>
 		<div class="Right">
 			<div class="NavItem"><i class="fa fa-lock"></i> Inloggen</div>

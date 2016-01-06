@@ -6,6 +6,8 @@
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    margin-bottom: 40px;
+
 }
 
 #Logo{
@@ -31,6 +33,8 @@
     background-color: #1976d2;
     height: 40px;
     width: 100%;
+    position: absolute;
+    top: 160px;
 }
 
 .Left{
