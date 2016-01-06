@@ -48,6 +48,7 @@ $hooks = Hooks::get();
 <?php
 Assets::js(array(
 	Url::templatePath() . 'js/jquery.js',
+	'https://www.google.com/recaptcha/api.js',
 	'//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
 	Url::templatePath() . 'js/script.js'
 

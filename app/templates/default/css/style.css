@@ -10,7 +10,7 @@
 	border:none;
 	box-shadow: 1px 3px #0B60B5;
 	border-radius:5px;
-	color:#f2f2f2;
+	color:#fff;
 	font-size:18px;
 	text-shadow:1px 1px rgba(0,0,0,0.75);
 	text-decoration: none;
@@ -22,6 +22,7 @@
 
 .page{
 	min-height:600px;
+	padding-bottom:50px;
 }
 
 .center{
@@ -68,6 +69,26 @@ hr{
 
 
 /* END HOME CODE */
+
+/* CONTACT PAGE */
+
+#contact_form{
+	width:100%;
+	background:#f2f2f2;
+	border:1px solid #ccc;
+	padding:20px;
+}
+
+#contact_form input,
+#contact_form textarea{
+	width:70%;
+}
+
+textarea{
+	resize:vertical;
+}
+
+/* END CONTACT PAGE*/
 
 
 /* Boten sectie
