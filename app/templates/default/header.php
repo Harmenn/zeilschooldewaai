@@ -54,7 +54,7 @@ $hooks->run('afterBody');
 			<i class="fa fa-instagram fa-lg"></i>
 
 		</div>
-		<img src="/zeilschooldewaai/app/templates/default/img/logo.png" id="Logo" />
+		<a href="home"><img src="/zeilschooldewaai/app/templates/default/img/logo.png" id="Logo" /></a>
 	</div>
 </div>
 <div id="navbar">

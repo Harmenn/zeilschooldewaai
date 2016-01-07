@@ -22,11 +22,6 @@ $( "#ResponsiveTrigger" ).click(function() {
 });
 
 function ChangeContent(content){
-    $(".Subject").slideUp( "500", function() {
-        // Animation complete.
-    });
-    $("#" + content).slideDown( "500", function() {
-        // Animation complete.
-    });
-
+    $(".Subject").slideUp( "500", function() {  });
+    $("#" + content).slideDown( "500", function() {  });
 }

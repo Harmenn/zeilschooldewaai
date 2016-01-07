@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffb9956d-68e8-4b45-823f-29ea06bedff2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/boten/overzicht.php" afterPath="$PROJECT_DIR$/app/views/boten/overzicht.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/default/css/header.css" afterPath="$PROJECT_DIR$/app/templates/default/css/header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/default/header.php" afterPath="$PROJECT_DIR$/app/templates/default/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cursussen/overzicht.php" afterPath="$PROJECT_DIR$/app/views/cursussen/overzicht.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/default/js/script.js" afterPath="$PROJECT_DIR$/app/templates/default/js/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/default/css/style.css" afterPath="$PROJECT_DIR$/app/templates/default/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zeilschooldewaai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,14 +29,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="overons.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/overons.php">
+      <file leaf-file-name="overzicht.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/boten/overzicht.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.307692">
-              <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+            <state vertical-scroll-proportion="-1.1153846">
+              <caret line="136" column="68" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="68" />
               <folding>
                 <element signature="e#6#30#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,23 +45,37 @@
         <entry file="file://$PROJECT_DIR$/app/templates/default/css/header.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="43" />
+              <caret line="116" column="32" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overzicht.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/boten/overzicht.php">
+      <file leaf-file-name="overzicht.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/cursussen/overzicht.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7539474">
-              <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
               <folding>
-                <element signature="e#6#30#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#3;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/default/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4624506">
+              <caret line="245" column="23" selection-start-line="245" selection-start-column="23" selection-end-line="245" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/app/templates/default/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -88,16 +104,16 @@
         <option value="$PROJECT_DIR$/design1/index.html" />
         <option value="$PROJECT_DIR$/app/templates/default/footer.php" />
         <option value="$PROJECT_DIR$/app/Controllers/Boten.php" />
-        <option value="$PROJECT_DIR$/app/templates/default/css/header.css" />
         <option value="$PROJECT_DIR$/app/Controllers/Cursussen.php" />
         <option value="$PROJECT_DIR$/app/Core/routes.php" />
         <option value="$PROJECT_DIR$/app/Controllers/Home.php" />
+        <option value="$PROJECT_DIR$/app/views/home/overons.php" />
+        <option value="$PROJECT_DIR$/app/views/boten/overzicht.php" />
+        <option value="$PROJECT_DIR$/app/templates/default/js/script.js" />
         <option value="$PROJECT_DIR$/app/templates/default/header.php" />
         <option value="$PROJECT_DIR$/app/views/cursussen/overzicht.php" />
-        <option value="$PROJECT_DIR$/app/views/home/overons.php" />
+        <option value="$PROJECT_DIR$/app/templates/default/css/header.css" />
         <option value="$PROJECT_DIR$/app/templates/default/css/style.css" />
-        <option value="$PROJECT_DIR$/app/templates/default/js/script.js" />
-        <option value="$PROJECT_DIR$/app/views/boten/overzicht.php" />
       </list>
     </option>
   </component>
@@ -236,6 +252,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeilschooldewaai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeilschooldewaai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -267,6 +305,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeilschooldewaai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeilschooldewaai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -474,9 +538,6 @@
           <caret line="43" column="18" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="18" />
           <folding>
             <element signature="e#6#30#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -642,41 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/overons.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.307692">
-          <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
-          <folding>
-            <element signature="e#6#30#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/default/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/default/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cursussen/overzicht.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/default/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48552632">
@@ -685,32 +711,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/overons.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83157897">
+          <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+          <folding>
+            <element signature="e#6#30#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/default/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2736842">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.6923075">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/default/css/style.css">
+    <entry file="file://$PROJECT_DIR$/app/templates/default/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.296296">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cursussen/overzicht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/default/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="32" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/boten/overzicht.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7539474">
-          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+        <state vertical-scroll-proportion="-1.1153846">
+          <caret line="136" column="68" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="68" />
           <folding>
             <element signature="e#6#30#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/default/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4624506">
+          <caret line="245" column="23" selection-start-line="245" selection-start-column="23" selection-end-line="245" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
