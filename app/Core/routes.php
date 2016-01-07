@@ -23,6 +23,7 @@ Router::any('contact', 'Controllers\Contact@index');
 
 /* User sectie */
 Router::any('login', 'Controllers\Login@index');
+Router::any('registreren', 'Controllers\Registreren@index');
 
 /** Module routes. */
 $hooks = Hooks::get();

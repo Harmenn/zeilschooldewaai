@@ -34,7 +34,7 @@ class Registreren extends Controller
         $data['home_message'] = $this->language->get('home_message');
 
         View::renderTemplate('header', $data);
-        View::render('registreren/registreren', $data);
+        View::render('user/registreren', $data);
         View::renderTemplate('footer', $data);
     }
 }
