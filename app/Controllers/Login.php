@@ -21,7 +21,7 @@ class Login extends Controller
 
     public function index()
     {
-        $database = $this->db->select();
+       
         $data['title'] = "Login";
 
         View::renderTemplate('header', $data);
