@@ -25,7 +25,7 @@ class Login extends Controller
 
         $data['title'] = "Login";
 
-        $data = $this->login->getUsers();
+        $data = $this->login->pushUsers();
         
 
         View::renderTemplate('header', $data);
