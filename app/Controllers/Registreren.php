@@ -30,6 +30,7 @@ class Registreren extends Controller
 
     public function index()
     {
+        print_r(\Helpers\Session::display());
         $data['title'] = $this->language->get('Registreren');
         $data['home_message'] = $this->language->get('home_message');
 

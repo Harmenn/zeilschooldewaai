@@ -25,9 +25,26 @@ class Login extends Controller
 
         $data['title'] = "Login";
 
-        $data = $this->login->pushUsers();
-        
-
+        $user = $_POST["username"];
+        $pass = $_POST["password"];
+        $passw = $this->login->pushUsers($user);
+        if (!empty($pass)) 
+        {
+            if (count($passw==1)) {
+                if ($pass == $passw[0]->wachtwoord) 
+                {
+                    \Helpers\Session::set('username', $user);
+                }
+                else
+                {
+                    
+                } 
+            }
+            
+        }
+        if (isset($_POST["logout"])) {
+            \Helpers\Session::destroy('username');
+        }
         View::renderTemplate('header', $data);
         View::render('user/login', $data);
         View::renderTemplate('footer', $data);
