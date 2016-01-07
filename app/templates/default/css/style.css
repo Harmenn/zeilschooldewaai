@@ -103,6 +103,7 @@ textarea{
 }
 /* Boten sectie
 ----------------------------------------------------------------- */
+
 .BootType h2{
 	text-align: center;
 }
@@ -116,6 +117,46 @@ textarea{
 	text-align: justify;
 }
 
+
+/* Cursussen sectie
+----------------------------------------------------------------- */
+
+.AgendaItem{
+	width: 21%;
+	margin: 5px 2%;
+	box-sizing: border-box;
+	float: left;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding-bottom: 6px;
+	height: 320px;
+}
+.AgendaItem img{
+	width: 100%;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.AgendaItem h3{
+	text-align: center;
+	margin: 5px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.AgendaItem p{
+	text-align: justify;
+	padding: 0px 10px;
+}
+.AgendaItem div{
+	text-align: center;
+}
+/* Registreren pagina
+----------------------------------------------------------------- */
+@media screen and (max-width: 992px) {
+	#registerimg{
+		display: none;
+	}
+}
 /* Responsive
 ----------------------------------------------------------------- */
 @media screen and (max-width: 992px){
@@ -138,10 +179,21 @@ textarea{
 		border-bottom: 1px solid #ddd;
 
 	}
+	.AgendaItem{
+		width: 29%;
+		margin: 5px 2%;
+		box-sizing: border-box;
+		float: left;
+		border: 1px solid #cccccc;
+		border-radius: 4px;
+		margin-bottom: 20px;
+		padding-bottom: 6px;
+	}
 
 
 }
 @media screen and (max-width: 650px) {
+
 	.BootType h2{
 		text-align: left;
 	}
@@ -156,6 +208,7 @@ textarea{
 		margin-left: 2%;
 		width: 58%;
 	}
+
 }
 @media screen and (max-width: 650px) {
 	.BootType h2{
@@ -182,3 +235,43 @@ textarea{
 		padding: 10px;
 	}
 }
+
+@media screen and (max-width: 600px){
+	.AgendaItem{
+		width: 98%;
+		margin: 5px 1%;
+		box-sizing: border-box;
+		float: left;
+		border: none;
+		border-bottom: 1px solid #ccc;
+		border-radius: 0px;
+		margin-bottom: 20px;
+		padding-bottom: 6px;
+	}
+	.AgendaItem img{
+		width: 40%;
+		margin-right: 5%;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		float: left;
+	}
+	.AgendaItem h3{
+		float: left;
+		width: 46%;
+		text-align: left;
+		margin: 8px 0px;
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 60px;
+	}
+	.AgendaItem p{
+		width: 100%;
+		text-align: left;
+		box-sizing: border-box;
+	}
+	.AgendaItem div{
+		text-align: center;
+		width: 100%;
+	}
+}
+

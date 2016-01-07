@@ -54,7 +54,7 @@ $hooks->run('afterBody');
 			<i class="fa fa-instagram fa-lg"></i>
 
 		</div>
-		<img src="/zeilschooldewaai/app/templates/default/img/logo.png" id="Logo" />
+		<a href="home"><img src="/zeilschooldewaai/app/templates/default/img/logo.png" id="Logo" /></a>
 	</div>
 </div>
 <div id="navbar">
@@ -67,18 +67,30 @@ $hooks->run('afterBody');
 			<a href="contact"><div class="NavItem <?php if($data['title'] == 'Contact'){echo 'active';} ?>">Contact</div></a>
 		</div>
 		<div class="Right">
-		<?php if (\Helpers\Session::get('username')) {
-			?><a href="loguit"><div class="NavItem"><i class="fa fa-lock"></i> Uitloggen</div></a><?php
-		}else{ ?>
-			<a href="login"><div class="NavItem <?php if($data['title'] == 'Login'){echo 'active';} ?>"><i class="fa fa-lock"></i> Ik ben al klant</div></a><?php } ?>
-			<a href="registreren"><div class="NavItem <?php if($data['title'] == 'Registeren'){echo 'active';} ?>"><i class="fa fa-info-circle"></i> Klant worden</div></a>
-			<!--<i class="fa fa-lock"></i>-->
+		<?php
+		//Andere menu item als er een login geset is.
+		if (\Helpers\Session::get('username')) {
+			?>
+			<a href="loguit"><div class="NavItem"><i class="fa fa-lock"></i> Uitloggen</div></a>
+			<a href="registreren"><div class="NavItem <?php if($data['title'] == 'Registeren'){echo 'active';} ?>"><i class="fa fa-lock"></i> Profiel</div></a>
+			<?php
+		}
+		//Normale menu items.
+		else{ ?>
+			<a href="login"><div class="NavItem <?php if($data['title'] == 'Login'){echo 'active';} ?>"><i class="fa fa-lock"></i> Ik ben al klant</div></a>
+			<a href="registreren"><div class="NavItem <?php if($data['title'] == 'Registreren'){echo 'active';} ?>"><i class="fa fa-info-circle"></i> Klant worden</div></a>
+
+			<?php 
+
+			} ?>
+		<!--<i class="fa fa-lock"></i>-->
 		</div>
 		<div id="ResponsiveLogo">De Waai | <?= $data['title']  ?></div>
 		<div id="ResponsiveTrigger"></div>
 	</div>
 	<div class="responsiveMenu">
 		<a href="home"><div class="ResponsiveItem">Home</div></a>
+		<a href="overons"><div class="ResponsiveItem">Over ons</div></a>
 		<a href="boten"><div class="ResponsiveItem">Boten</div></a>
 		<a href="cursussen"><div class="ResponsiveItem">Cursussen</div></a>
 		<a href="contact"><div class="ResponsiveItem">contact</div></a>

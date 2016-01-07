@@ -27,10 +27,12 @@ class Login extends Controller
 
         $user = $_POST["username"];
         $pass = sha1($_POST["password"]);
-        $passw = $this->login->pushUsers($user);
+        
         if (!empty($pass)) 
         {
-            if (count($passw)==1) {
+            if ($_POST) 
+            {
+                $passw = $this->login->pushUsers($user);
                 if ($pass == $passw[0]->wachtwoord) 
                 {
                     \Helpers\Session::set('username', $user);
@@ -40,10 +42,6 @@ class Login extends Controller
                 {
                     $data["error"] = "1 of meerdere velden zijn onjuist ingevult.";
                 } 
-            }
-            else
-            {
-                $data["error"] = "Uw e-mail is onjuist ingevult.";
             }
             
         }
