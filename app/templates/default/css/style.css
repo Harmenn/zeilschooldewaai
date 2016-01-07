@@ -95,6 +95,12 @@ textarea{
 #hostel{
 	display: none;
 }
+
+
+.Subject{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
 /* Boten sectie
 ----------------------------------------------------------------- */
 .BootType h2{

@@ -22,10 +22,10 @@ $( "#ResponsiveTrigger" ).click(function() {
 });
 
 function ChangeContent(content){
-    $(".Subject").fadeOut( "300", function() {
+    $(".Subject").slideUp( "500", function() {
         // Animation complete.
     });
-    $("#" + content).delay('300').fadeIn( "300", function() {
+    $("#" + content).slideDown( "500", function() {
         // Animation complete.
     });
 
