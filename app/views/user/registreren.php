@@ -19,7 +19,7 @@ $hooks = Hooks::get();
             <h1>Registreren</h1>
         </div>
 
-        <form action="submit" method="post">
+        <form action="" method="post">
             <div class="row">
                 
                 <div class="col-xs-2">
@@ -40,7 +40,7 @@ $hooks = Hooks::get();
                 <div class="col-xs-2">
                     <p>Geslacht
                         <br />                       
-                            <select id="Geslacht" name="Geslacht">
+                            <select id="Geslacht" name="geslacht">
                                 <option value="Man">Man</option>
                                 <option value="Vrouw">Vrouw</option>
                             </select>                       
