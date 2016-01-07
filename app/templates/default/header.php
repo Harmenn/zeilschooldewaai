@@ -67,7 +67,6 @@ $hooks->run('afterBody');
 			<a href="contact"><div class="NavItem <?php if($data['title'] == 'Contact'){echo 'active';} ?>">Contact</div></a>
 		</div>
 		<div class="Right">
-<<<<<<< HEAD
 		<?php
 		//Andere menu item als er een login geset is.
 		if (\Helpers\Session::get('username')) {
@@ -84,13 +83,11 @@ $hooks->run('afterBody');
 			<?php 
 
 			} ?>
-=======
 		<?php if (\Helpers\Session::get('username')) {
 			?><a href="loguit"><div class="NavItem"><i class="fa fa-lock"></i> Uitloggen</div></a><?php
 		}else{ ?>
 			<a href="login"><div class="NavItem <?php if($data['title'] == 'Login'){echo 'active';} ?>"><i class="fa fa-lock"></i> Inloggen</div></a><?php } ?>
 			<a href="registreren"><div class="NavItem <?php if($data['title'] == 'Registeren'){echo 'active';} ?>"><i class="fa fa-info-circle"></i> Registreren</div></a>
->>>>>>> origin/master
 			<!--<i class="fa fa-lock"></i>-->
 		</div>
 		<div id="ResponsiveLogo">De Waai | <?= $data['title']  ?></div>
