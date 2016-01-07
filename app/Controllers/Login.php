@@ -26,27 +26,34 @@ class Login extends Controller
         $data['title'] = "Login";
 
         $user = $_POST["username"];
-        $pass = $_POST["password"];
+        $pass = sha1($_POST["password"]);
         $passw = $this->login->pushUsers($user);
         if (!empty($pass)) 
         {
-            if (count($passw==1)) {
+            if (count($passw)==1) {
                 if ($pass == $passw[0]->wachtwoord) 
                 {
                     \Helpers\Session::set('username', $user);
+                    \Helpers\Url::redirect('home');
                 }
                 else
                 {
-                    
+                    $data["error"] = "1 of meerdere velden zijn onjuist ingevult.";
                 } 
             }
+            else
+            {
+                $data["error"] = "Uw e-mail is onjuist ingevult.";
+            }
             
-        }
-        if (isset($_POST["logout"])) {
-            \Helpers\Session::destroy('username');
         }
         View::renderTemplate('header', $data);
         View::render('user/login', $data);
         View::renderTemplate('footer', $data);
+    }
+    public function loguit()
+    {
+        \Helpers\Session::destroy('username');
+        \Helpers\Url::redirect('home');
     }
 }

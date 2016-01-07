@@ -26,7 +26,7 @@ Router::any('cursussen', 'Controllers\Cursussen@index');
 /* User sectie */
 Router::any('login', 'Controllers\Login@index');
 Router::any('registreren', 'Controllers\Registreren@index');
-
+Router::any('loguit', 'Controllers\Login@loguit');
 
 
 /** Module routes. */
