@@ -37,4 +37,13 @@ class Home extends Controller
         View::render('home/home', $data);
         View::renderTemplate('footer', $data);
     }
+    public function overons()
+    {
+        $data['title'] = $this->language->get('Over ons');
+        $data['home_message'] = $this->language->get('no message');
+
+        View::renderTemplate('header', $data);
+        View::render('home/overons', $data);
+        View::renderTemplate('footer', $data);
+    }
 }
