@@ -30,17 +30,19 @@ class Login extends Controller
         
         if (!empty($pass)) 
         {
-            $passw = $this->login->pushUsers($user);
-            if ($pass == $passw[0]->wachtwoord) 
+            if ($_POST) 
             {
-                \Helpers\Session::set('username', $user);
-                \Helpers\Url::redirect('home');
+                $passw = $this->login->pushUsers($user);
+                if ($pass == $passw[0]->wachtwoord) 
+                {
+                    \Helpers\Session::set('username', $user);
+                    \Helpers\Url::redirect('home');
+                }
+                else
+                {
+                    $data["error"] = "1 of meerdere velden zijn onjuist ingevult.";
+                } 
             }
-            else
-            {
-                $data["error"] = "1 of meerdere velden zijn onjuist ingevult.";
-            } 
-            
             
         }
         View::renderTemplate('header', $data);
