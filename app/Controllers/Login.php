@@ -23,7 +23,7 @@ class Login extends Controller
     {
        
         $data['title'] = "Login";
-
+    
         View::renderTemplate('header', $data);
         View::render('user/login', $data);
         View::renderTemplate('footer', $data);
