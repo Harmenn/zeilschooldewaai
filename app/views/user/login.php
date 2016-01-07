@@ -13,7 +13,7 @@ use Core\Language;
 
 	<p>E-mail<br /><input type='text' name='username'></p>
 	<p>Wachtwoord<br /><input type='password' name='password'></p>
-	<p><input type='submit' name='submit' value='Login'></p>
+	<p><input class="btn btn-info" type='submit' name='submit' value='Login'></p>
 
 	</form>
 	<?php
