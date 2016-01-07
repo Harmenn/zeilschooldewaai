@@ -14,25 +14,7 @@ $hooks = Hooks::get();
         <h1>Registreren</h1>
     </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </head>
-    <body>
-        <div class="page-header">
-            <h1>Registreren</h1>
-        </div>
 
-        <form action="" method="post">
-            <div class="row">
-                
-                <div class="col-xs-2">
-                    <p>Voornaam<br /><input class="form-control" type='text' name='voornaam' required></p> 
-                </div>
-                
-                <div class="col-xs-2">
-=======
-=======
->>>>>>> origin/master
     <form action="submit" method="post">
         <div class="row">
             <div class="col-md-7">
@@ -40,10 +22,7 @@ $hooks = Hooks::get();
                     <p>Voornaam<br /><input class="form-control" type='text' name='voornaam' required></p>
                 </div>
                 <div class="col-md-3">
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+
                     Voorletters<br /><input class="form-control" type='text' name='voorletters' required>
                 </div>
 
@@ -54,8 +33,7 @@ $hooks = Hooks::get();
                 <div class="col-md-6">
                     <p>Achternaam<br /><input class="form-control" type='text' name='achternaam' required></p>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 <div class="col-xs-2">
                     <p>Geslacht
                         <br />                       
@@ -72,12 +50,12 @@ $hooks = Hooks::get();
             <div class="row">
                 
                 <div class="col-xs-2">
-=======
+
                 <div class="col-md-5">
->>>>>>> origin/master
-=======
+
+
                 <div class="col-md-5">
->>>>>>> origin/master
+
                     <p>Adres<br /><input class="form-control" type='text' name='adres' required></p>
                 </div>
                 <div class="col-md-2">
@@ -130,17 +108,17 @@ $hooks = Hooks::get();
                     <br />
                     <button class="btn btn-info" type="submit">Registreren</button>
                 </div>
-<<<<<<< HEAD
+
             </div>
             <div class="col-md-5">
                 <img src="/zeilschooldewaai/app/templates/default/img/register.jpg" width="100%" style="border-radius: 4px;" id="registerimg"/>
             </div>
-=======
+
             </div>
             <div class="col-md-5">
                 <img src="/zeilschooldewaai/app/templates/default/img/register.jpg" width="100%" style="border-radius: 4px;" id="registerimg"/>
             </div>
->>>>>>> origin/master
+
         </div>
     </form>
 
