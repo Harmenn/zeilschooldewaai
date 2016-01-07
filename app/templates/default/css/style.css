@@ -130,6 +130,7 @@ textarea{
 	border-radius: 4px;
 	margin-bottom: 20px;
 	padding-bottom: 6px;
+	height: 320px;
 }
 .AgendaItem img{
 	width: 100%;
@@ -149,7 +150,13 @@ textarea{
 .AgendaItem div{
 	text-align: center;
 }
-
+/* Registreren pagina
+----------------------------------------------------------------- */
+@media screen and (max-width: 992px) {
+	#registerimg{
+		display: none;
+	}
+}
 /* Responsive
 ----------------------------------------------------------------- */
 @media screen and (max-width: 992px){
