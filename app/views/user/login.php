@@ -11,8 +11,11 @@ use Core\Language;
 	</div>
 	<form action="submit" method="post">
 
-	<p>Username<br /><input type='text' name='username'></p>
-	<p>Password<br /><input type='password' name='password'></p>
+	<p>E-mail<br /><input type='text' name='username'></p>
+	<p>Wachtwoord<br /><input type='password' name='password'></p>
 	<p><input type='submit' name='submit' value='Login'></p>
 
 	</form>
+	<?php
+	print_r($data);
+	?>

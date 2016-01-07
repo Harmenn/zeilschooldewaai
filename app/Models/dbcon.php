@@ -1,4 +1,0 @@
-<?php
-	use Core\Model;
-
-	
