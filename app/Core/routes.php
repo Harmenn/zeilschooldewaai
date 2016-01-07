@@ -11,19 +11,22 @@
 use Core\Router;
 use Helpers\Hooks;
 
-/** Define routes. */
+/* Landing sectie */
 Router::any('', 'Controllers\Home@index');
 Router::any('home', 'Controllers\Home@index');
-
+Router::any('contact', 'Controllers\Contact@index');
 
 /* Boten sectie */
 Router::any('boten', 'Controllers\Boten@index');
-Router::any('contact', 'Controllers\Contact@index');
 
+/* Cursussen sectie */
+Router::any('cursussen', 'Controllers\Cursussen@index');
 
 /* User sectie */
 Router::any('login', 'Controllers\Login@index');
 Router::any('registreren', 'Controllers\Registreren@index');
+
+
 
 /** Module routes. */
 $hooks = Hooks::get();
