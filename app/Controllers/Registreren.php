@@ -35,23 +35,23 @@ class Registreren extends Controller
         $data['title'] = $this->language->get('Registreren');
         $data['home_message'] = $this->language->get('home_message');
         
-        $voorletters = $_POST['geslacht'];
-        $geslacht = $_POST['voorletters'];
+        $$geslacht = $_POST['geslacht'];
+        $voorletters = $_POST['voorletters'];
         $voornaam = $_POST['voornaam'];
-        $tussenvoegsel = $_POST['tv'];
+        $tussenvoegsel = $_POST['tussenvoegsel'];
         $achternaam = $_POST['achternaam'];
         $adres = $_POST['adres'];
         $postcode = $_POST['postcode'];
         $woonplaats = $_POST['woonplaats'];
         $telefoonnummer = $_POST['tel'];
         $mobiel = $_POST['mobiel'];
-        $email = $_POST['email'];
-        $geboortedatum = $_POST['date'];
+        $email = $_POST['email'];       
         $niveau = $_POST['niveau'];
+        $geboortedatum = $_POST['date'];
         $wachtwoord = sha1($_POST["password"]);
         $url = "leeg";
         
-        $this->registreren->insertUsers($voorletters, $geslacht, $voornaam, $tussenvoegsels, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau, $wachtwoord, $url, 0);
+        $this->registreren->insertUsers($voorletters, $geslacht, $voornaam, $tussenvoegsels, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau, $wachtwoord, $url);
         
         View::renderTemplate('header', $data);
         View::render('user/registreren', $data);
