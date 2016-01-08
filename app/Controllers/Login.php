@@ -53,6 +53,7 @@ class Login extends Controller
     public function loguit()
     {
         \Helpers\Session::destroy('username');
+        \Helpers\Session::destroy('id');
         \Helpers\Url::redirect('home');
     }
 }
