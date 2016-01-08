@@ -10,7 +10,12 @@
 		public function __construct(){
 			parent::__construct();
 		}
-	
+
+		public function getUser($email){
+			$result = $this->db->select("SELECT * FROM klanten WHERE email = '$email'");
+			
+			return $result;
+		}
 
 		public function pushUsers($user)
 		{
