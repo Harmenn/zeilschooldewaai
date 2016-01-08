@@ -10,11 +10,16 @@
 		public function __construct(){
 			parent::__construct();
 		}
-	
+
+		public function getUser($email){
+			$result = $this->db->select("SELECT * FROM klanten WHERE email = '$email'");
+			
+			return $result;
+		}
 
 		public function pushUsers($user)
 		{
-			$result = $this->db->select("SELECT wachtwoord FROM klanten WHERE email = '$user'");
+			$result = $this->db->select("SELECT wachtwoord, klant_id FROM klanten WHERE email = '$user'");
 			
 			return $result;
 		}

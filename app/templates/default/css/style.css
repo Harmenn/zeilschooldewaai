@@ -70,6 +70,14 @@ hr{
 
 /* END HOME CODE */
 
+
+.login_form{
+	max-width:50%;
+	background:#f2f2f2;
+	border:1px solid #ccc;
+	padding:30px;
+}
+
 /* CONTACT PAGE */
 
 #contact_form{

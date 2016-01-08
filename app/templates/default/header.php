@@ -72,7 +72,7 @@ $hooks->run('afterBody');
 		if (\Helpers\Session::get('username')) {
 			?>
 			<a href="loguit"><div class="NavItem"><i class="fa fa-lock"></i> Uitloggen</div></a>
-			<a href="registreren"><div class="NavItem <?php if($data['title'] == 'Registeren'){echo 'active';} ?>"><i class="fa fa-lock"></i> Profiel</div></a>
+			<a href="profiel"><div class="NavItem <?php if($data['title'] == 'Registeren'){echo 'active';} ?>"><i class="fa fa-lock"></i> Profiel</div></a>
 			<?php
 		}
 		//Normale menu items.

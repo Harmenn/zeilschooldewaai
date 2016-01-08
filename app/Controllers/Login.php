@@ -36,11 +36,12 @@ class Login extends Controller
                 if ($pass == $passw[0]->wachtwoord) 
                 {
                     \Helpers\Session::set('username', $user);
+                    \Helpers\Session::set('id', $passw[0]->id);
                     \Helpers\Url::redirect('home');
                 }
                 else
                 {
-                    $data["error"] = "1 of meerdere velden zijn onjuist ingevult.";
+                    $data["error"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>Dit account wordt niet herkent.</div>';
                 } 
             }
             

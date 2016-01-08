@@ -20,7 +20,7 @@ class Mail extends PhpMailer
      *
      * @var string $From set sender email
      */
-    public $From     = 'noreply@domain.com';
+    public $From     = 'noreply@localhost';
 
     /**
      * FromName
