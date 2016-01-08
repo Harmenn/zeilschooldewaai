@@ -25,3 +25,23 @@ function ChangeContent(content){
     $(".Subject").slideUp( "500", function() {  });
     $("#" + content).slideDown( "500", function() {  });
 }
+
+$(".CursusRij").click(function() {
+    $(".SelectArrow").removeClass('active');
+    var cursusId = $(this).attr('data-cursusid');
+    $('#cursus' + cursusId).prop('checked', true);
+    $("#CursusIcon" + cursusId).addClass('active');
+    $("#stap2").removeClass('disabled');
+    //CursusIcon
+});
+
+$(".btnstap").click(function() {
+    if ( $( this ).hasClass( "disabled" ) ) {
+        console.log('test');
+    }else{
+        var stap = $(this).attr('id');
+        console.log(stap);
+        $(".Subject").slideUp( "500", function() {  });
+        $("#" + stap + "_inschrijven").slideDown( "500", function() {  });
+    }
+});
