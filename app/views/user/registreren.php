@@ -25,7 +25,7 @@ $hooks = Hooks::get();
                 </div>
 
                 <div class="col-md-3">
-                    <p>Tussenvoegsel<br /><input class="form-control" type='text' name='t/v'></p>
+                    <p>Tussenvoegsel<br /><input class="form-control" type='text' name='tussenvoegsel'></p>
                 </div>
 
                 <div class="col-md-6">
@@ -38,7 +38,7 @@ $hooks = Hooks::get();
                     <p>Postcode<br /><input class="form-control" type='text' name='postcode' required></p>
                 </div>
                 <div class="col-md-5">
-                    <p>Woonplaats<br /><input class="form-control" type='text' name='Woonplaats' required></p>
+                    <p>Woonplaats<br /><input class="form-control" type='text' name='woonplaats' required></p>
                 </div>
                 <div class="col-md-6">
                     <p>Telefoonnummer<br /><input class="form-control" type='tel' name='tel'></p>
@@ -55,7 +55,7 @@ $hooks = Hooks::get();
                 <div class="col-md-8">
                     <p>Geslacht
                         <br />
-                        <select id="Geslacht" name="Geslacht" class="form-control">
+                        <select id="Geslacht" name="geslacht" class="form-control">
                             <option value="Man">Man</option>
                             <option value="Vrouw">Vrouw</option>
                         </select>
@@ -64,7 +64,7 @@ $hooks = Hooks::get();
                 <div class="col-md-12">
                     <p>Niveau
                         <br />
-                        <select id="Niveau" name="Niveau"  class="form-control">
+                        <select id="Niveau" name="niveau"  class="form-control">
                             <option value="Beginner">Beginner</option>
                             <option value="Gevorderd">Gevorderd</option>
                         </select>

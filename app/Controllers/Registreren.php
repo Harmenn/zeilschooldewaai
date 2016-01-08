@@ -35,7 +35,7 @@ class Registreren extends Controller
         $data['title'] = $this->language->get('Registreren');
         $data['home_message'] = $this->language->get('home_message');
         
-        $$geslacht = $_POST['geslacht'];
+        $geslacht = $_POST['geslacht'];
         $voorletters = $_POST['voorletters'];
         $voornaam = $_POST['voornaam'];
         $tussenvoegsel = $_POST['tussenvoegsel'];
