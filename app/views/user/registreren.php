@@ -14,7 +14,7 @@ $hooks = Hooks::get();
         <h1>Registreren</h1>
     </div>
 
-    <form action="submit" method="post">
+    <form action="" method="post">
         <div class="row">
             <div class="col-md-7">
                 <div class="col-md-12">
