@@ -5,25 +5,23 @@
 
 use Core\Language;
 if (\Helpers\Session::get('username')) {
-	?>
-	<div class="page-header">
-		<h1>Log uit</h1>
-	</div>
-		<form action="" method="post">
-			<input class="btn btn-info" type="submit" name="logout" value="log uit">
-		</form>
-	<?php
+	\Helpers\Url::redirect('home');
 }
 else{
 ?>
-    <div class="page-header">
-            <h1>Login</h1>
-    </div>
-        <form action="" method="post" class="col-xs-3">
+	<center>
+	    <div class="page-header">
+	            <h1>Login</h1>
+	    </div>
+
+        <form action="" method="post" class="login_form">
         <?php echo $data["error"]; ?>
-            <p>E-mail<br /><input class="form-control" type='text' name='username'></p>
-            <p>Wachtwoord<br /><input class="form-control" type='password' name='password'></p>
-            <p style="float: right"><input class="btn btn-info" type='submit' name='submit' value='Login'></p>
+            <p><b>E-mail:</b><br /><input class="form-control" type='text' name='username'></p>
+            <p><b>Wachtwoord:</b><br /><input class="form-control" type='password' name='password'></p>
+            <br>
+            <input class="btn btn-primary" type='submit' name='submit' value='Inloggen'>
+            <br><br>Nog geen account? <a href="registreren">Registreer</a> een account.
         </form>
+    </center>
 
 	<?php }
