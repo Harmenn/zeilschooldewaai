@@ -35,10 +35,10 @@ class Registreren extends Controller
         $data['title'] = $this->language->get('Registreren');
         $data['home_message'] = $this->language->get('home_message');
         
-        $voorletters = $_POST['voorletters'];
-        $geslacht = $_POST['geslacht'];
+        $voorletters = $_POST['geslacht'];
+        $geslacht = $_POST['voorletters'];
         $voornaam = $_POST['voornaam'];
-        $tussenvoegsels = $_POST['tv'];
+        $tussenvoegsel = $_POST['tv'];
         $achternaam = $_POST['achternaam'];
         $adres = $_POST['adres'];
         $postcode = $_POST['postcode'];
