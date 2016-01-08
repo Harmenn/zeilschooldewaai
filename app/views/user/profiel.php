@@ -4,7 +4,7 @@
  */
 
 use Core\Language;
-if (\Helpers\Session::get('username')) {
+if (\Helpers\Session::get('id')) {
 	?>
 		<div class="page-header">
 		        <h1>Profiel</h1>

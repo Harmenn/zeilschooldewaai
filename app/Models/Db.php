@@ -11,8 +11,8 @@
 			parent::__construct();
 		}
 
-		public function getUser($email){
-			$result = $this->db->select("SELECT * FROM klanten WHERE email = '$email'");
+		public function getUser($id){
+			$result = $this->db->select("SELECT * FROM klanten WHERE klant_id = '$id'");
 			
 			return $result;
 		}

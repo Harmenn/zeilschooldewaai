@@ -24,8 +24,8 @@ class Profiel extends Controller
     {
 
         $data['title'] = "Profiel";
-        $email = \Helpers\Session::get('username');
-        $data['klant'] = $this->profiel->getUser($email);
+        $id = \Helpers\Session::get('id');
+        $data['klant'] = $this->profiel->getUser($id);
           
         View::renderTemplate('header', $data);
         View::render('user/profiel', $data);
