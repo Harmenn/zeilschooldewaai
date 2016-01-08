@@ -56,7 +56,7 @@ $hooks = Hooks::get();
                 <div class="col-md-8">
                     <p>Geslacht
                         <br />
-                        <select id="Geslacht" name="geslacht" class="form-control">
+                        <select id="geslacht" name="geslacht" class="form-control">
                             <option value="Man">Man</option>
                             <option value="Vrouw">Vrouw</option>
                         </select>
@@ -65,7 +65,7 @@ $hooks = Hooks::get();
                 <div class="col-md-12">
                     <p>Niveau
                         <br />
-                        <select id="Niveau" name="niveau"  class="form-control">
+                        <select id="niveau" name="niveau"  class="form-control">
                             <option value="Beginner">Beginner</option>
                             <option value="Gevorderd">Gevorderd</option>
                         </select>
