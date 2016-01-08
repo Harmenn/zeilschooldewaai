@@ -35,6 +35,7 @@ class Registreren extends Controller
         $data['title'] = $this->language->get('Registreren');
         $data['home_message'] = $this->language->get('home_message');
         
+        //if()
         $geslacht = $_POST['geslacht'];
         $voorletters = $_POST['voorletters'];
         $voornaam = $_POST['voornaam'];
@@ -51,10 +52,12 @@ class Registreren extends Controller
         $wachtwoord = sha1($_POST["password"]);
         $url = "leeg";
         
-        $this->registreren->insertUsers($voorletters, $geslacht, $voornaam, $tussenvoegsels, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau, $wachtwoord, $url);
+        $this->registreren->insertUsers($geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $niveau, $geboortedatum, $wachtwoord, $url);
         
         View::renderTemplate('header', $data);
         View::render('user/registreren', $data);
         View::renderTemplate('footer', $data);
+        
     }
+    \Helpers\Url::redirect('home');
 }

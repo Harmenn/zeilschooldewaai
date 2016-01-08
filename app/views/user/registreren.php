@@ -10,6 +10,7 @@ use Helpers\Hooks;
 //initialise hooks
 $hooks = Hooks::get();
 ?>
+
     <div class="page-header">
         <h1>Registreren</h1>
     </div>
