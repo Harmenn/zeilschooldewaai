@@ -5,6 +5,7 @@
     <li role="presentation"><a href="#Soorten" role="tab"  onclick="ChangeContent('beginners')" data-toggle="tab">Beginners cursus</a></li>
     <li role="presentation"><a href="#Soorten" role="tab"  onclick="ChangeContent('ervaren')" data-toggle="tab">Ervaren cursus</a></li>
     <li role="presentation"><a href="#Soorten" role="tab"  onclick="ChangeContent('wadtochten')" data-toggle="tab">Wadtochten</a></li>
+    <li role="presentation"><a href="#Soorten" role="tab"  onclick="ChangeContent('inschrijven')" data-toggle="tab">Inschrijven</a></li>
 </ul>
 
 <div id="Agenda" class="Subject">
@@ -151,6 +152,27 @@
     <div class="col-md-5">
         <br /><br /><br />
         <img src="/zeilschooldewaai/app/templates/default/img/cursussen/wadden.jpg" id="boten_sideImg" alt="Draak" />
+    </div>
+    <div class="spacer" style="clear: both;"></div>
+    <br />
+    <br />
+</div>
+
+
+
+<div id="inschrijven" class="Subject" style="display: none">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h1>Inschrijven</h1>
+        </div>
+        <?php
+            if (\Helpers\Session::get('username')) {
+                echo "Formulier hier, persoon is ingelogd.";
+            }
+            else{
+                echo "Maak eerst een account aan of log-in voordat je je kunt inschrijven.";
+            }
+        ?>
     </div>
     <div class="spacer" style="clear: both;"></div>
     <br />
