@@ -36,6 +36,7 @@ class Login extends Controller
                 if ($pass == $passw[0]->wachtwoord) 
                 {
                     \Helpers\Session::set('username', $user);
+                    \Helpers\Session::set('id', $passw[0]->id);
                     \Helpers\Url::redirect('home');
                 }
                 else

@@ -14,7 +14,7 @@
 
 		public function pushUsers($user)
 		{
-			$result = $this->db->select("SELECT wachtwoord FROM klanten WHERE email = '$user'");
+			$result = $this->db->select("SELECT wachtwoord, klant_id FROM klanten WHERE email = '$user'");
 			
 			return $result;
 		}

@@ -53,6 +53,13 @@ class Registreren extends Controller
         
         $this->registreren->insertUsers($voorletters, $geslacht, $voornaam, $tussenvoegsels, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau, $wachtwoord, $url, 0);
         
+        $mail = new \Helpers\PhpMailer\Mail();
+        $mail->setFrom('noreply@localhost');
+        $mail->addAddress('ruudlouwerse@live.nl');
+        $mail->subject('Important Email');
+        $mail->body("<h1>Hey</h1><p>I like this <b>Bold</b> Text!</p>");
+        $mail->send();
+
         View::renderTemplate('header', $data);
         View::render('user/registreren', $data);
         View::renderTemplate('footer', $data);
