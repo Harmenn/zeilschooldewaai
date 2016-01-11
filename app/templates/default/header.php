@@ -67,6 +67,8 @@ $hooks->run('afterBody');
 			<a href="contact"><div class="NavItem <?php if($data['title'] == 'Contact'){echo 'active';} ?>">Contact</div></a>
 		</div>
 		<div class="Right">
+            
+            
 		<?php
 		//Andere menu item als er een login geset is.
 		if (\Helpers\Session::get('username')) {
