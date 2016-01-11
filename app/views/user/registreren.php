@@ -83,7 +83,7 @@ $hooks = Hooks::get();
                 </div>
                 <div class="col-md-12">
                     <br />
-                    <button class="btn btn-info" type="submit">Registreren</button>
+                    <button class="btn btn-primary" type="submit">Registreren</button>
                 </div>
             </div>
             <div class="col-md-5">
