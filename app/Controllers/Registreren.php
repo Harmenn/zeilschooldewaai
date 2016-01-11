@@ -33,7 +33,7 @@ class Registreren extends Controller
     public function sendValidateMail($email)
     {
 
-        $url = md5($email);
+        $url = md5($email."halloditisvoordezewebsitezeilschooldewaai@@@#!");
 
         $mail = new \Helpers\PhpMailer\Mail();
         $mail->addAddress($email);
@@ -67,6 +67,7 @@ class Registreren extends Controller
 
         if ($_POST)
         {   
+            $form_captcha = $_POST['g-recaptcha-response'];
             if($form_captcha == 0)
             {
                 $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>De captcha is niet ingevuld.</div>';
@@ -88,7 +89,7 @@ class Registreren extends Controller
                 $geboortedatum = $_POST['date'];
                 $wachtwoord = $_POST["password"];
                 $wachtwoord1 = $_POST["password1"];
-                $form_captcha = $_POST['g-recaptcha-response'];
+                
                 if($wachtwoord == $wachtwoord1)
                 {
                     $wachtwoord = sha1($_POST["password"]);
