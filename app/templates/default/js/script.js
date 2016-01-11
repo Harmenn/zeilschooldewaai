@@ -54,3 +54,23 @@ $("#Comments").keyup(function() {
     var resterend = 250 - cnt;
     $("#CountDown").html(resterend);
 });
+
+$('#CursusForm').submit(function (e) {
+    e.preventDefault();
+
+
+    $.post( "/zeilschooldewaai/app/api/cursussen.php?action=1", $('form').serialize())
+        .done(function( data ) {
+            console.log('==== Data =====');
+            console.log(data);
+            if(data != 'voorwaarden niet geaccepteerd'){
+                //$(".Subject").slideUp( "500", function() {  });
+                //$("#stap3_inschrijven").slideDown( "500", function() {  });
+            }else{
+                $("#voorwaardenLabel").css('color','#b20000');
+                $("#voorwaardenLabel").attr('title','U moet eerst de voorwaarden accepteren');
+                $("#voorwaarden").css('border','#b20000');
+            }
+
+        });
+});

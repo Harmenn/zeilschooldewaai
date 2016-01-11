@@ -189,6 +189,10 @@ textarea{
 	color: #555;
 	font-weight: 600;
 }
+
+#voorwaarden{
+	zoom: 1.4;
+}
 /* Registreren pagina
 ----------------------------------------------------------------- */
 @media screen and (max-width: 992px) {
