@@ -18,7 +18,7 @@ $hooks = Hooks::get();
 		
 		<div class="top-footer">
 			<div class="container">
-				<span class="title"><i class="fa fa-pencil"></i> Heeft u zich al ingeschreven voor een cursus? <a href="#"><button class="button">Schrijf je nu in!</button></a></span>
+				<span class="title"><i class="fa fa-pencil"></i> Heeft u zich al ingeschreven voor een cursus? <a href="cursussen#inschrijven"><button class="button">Schrijf je nu in!</button></a></span>
 			</div>
 		</div>
 		<div class="container">
@@ -33,7 +33,8 @@ $hooks = Hooks::get();
 			</div>
 			<div class="col-md-4">
 				<h2>Contact opnemen</h2><hr>
-				<p>Heeft u vragen of opmerkingen? Dat horen wij graag en lossen het ook graag op. Neem contact op via het contactformulier op de contact pagina, <a href="contact">klik hier.</a></p>
+				<p>Zeilschool de Waai<br>Ymedaem 45<br>8722 GR Warns<br>Telefoon: 0514 561290<br>Email: info@zs-waai.nl<br><br>
+				Heeft u vragen of opmerkingen? <a href="contact">Klik hier.</a></p>
 			</div>
 		</div>
 

@@ -43,7 +43,7 @@ use Core\Language;
 						  <label for="message">Captcha <small>(Tegen bots)</small>:</label>
 						  <div class="g-recaptcha" id="captcha" name="form_captcha" data-sitekey="6LdEohQTAAAAAJTVjYk_L35j7aQ_ctXuv0qCPEzj"></div>
 						</div>
-					  <button type="submit" class="button">Verzenden</button>
+					  <button class="btn btn-primary" type="submit">Verzenden</button>
 					</form>
 				<?php 
 			}else{
@@ -80,7 +80,7 @@ use Core\Language;
 					  <label for="message">Captcha <small>(Tegen bots)</small>:</label>
 					  <div class="g-recaptcha" id="captcha" name="form_captcha" data-sitekey="6LdEohQTAAAAAJTVjYk_L35j7aQ_ctXuv0qCPEzj"></div>
 					</div>
-				  <button type="submit" class="button">Verzenden</button>
+				  <button class="btn btn-primary" type="submit">Verzenden</button>
 				</form>
 			<?php
 		}

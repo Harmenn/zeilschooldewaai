@@ -158,6 +158,37 @@ textarea{
 .AgendaItem div{
 	text-align: center;
 }
+
+#CursusTable{
+	cursor: pointer;
+}
+
+.CursusRij > td > input[type=radio]{
+	display: none;
+}
+.SelectArrow{
+	height: 20px;
+	width: 20px;
+	background-image: url('/zeilschooldewaai/app/templates/default/img/icons/arrow.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: .2s;
+}
+.SelectArrow.active{
+	background-image: url('/zeilschooldewaai/app/templates/default/img/icons/arrow_active.png') !important;
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	transform: rotate(90deg);
+}
+
+#CountDown{
+	float: right;
+	margin-top: -23px;
+	margin-right: 10px;
+	color: #555;
+	font-weight: 600;
+}
 /* Registreren pagina
 ----------------------------------------------------------------- */
 @media screen and (max-width: 992px) {

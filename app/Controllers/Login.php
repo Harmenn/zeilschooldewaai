@@ -36,7 +36,7 @@ class Login extends Controller
                 if ($pass == $passw[0]->wachtwoord) 
                 {
                     \Helpers\Session::set('username', $user);
-                    \Helpers\Session::set('id', $passw[0]->id);
+                    \Helpers\Session::set('id', $passw[0]->klant_id);
                     \Helpers\Url::redirect('home');
                 }
                 else
@@ -53,6 +53,7 @@ class Login extends Controller
     public function loguit()
     {
         \Helpers\Session::destroy('username');
+        \Helpers\Session::destroy('id');
         \Helpers\Url::redirect('home');
     }
 }

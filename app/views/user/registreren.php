@@ -8,68 +8,102 @@ use Helpers\Hooks;
 //initialise hooks
 $hooks = Hooks::get();
 ?>
+    <style>
+        .required{
+            color:red;
+            font-weight:bold;
+            font-size:20px;
+            position: absolute;
+            top: -5px;
+        }
+    </style>
+
     <div class="page-header">
         <h1>Registreren</h1>
     </div>
+<<<<<<< HEAD
+=======
+
+    <?php echo $data["melding"]; ?>
+
+>>>>>>> origin/master
     <form action="" method="post">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-7" style="padding-left:0px;">
                 <div class="col-md-12">
-                    <p>Voornaam<br /><input class="form-control" type='text' name='voornaam' required></p>
+                    <p>Voornaam <span class="required">*</span><br /><input class="form-control" type='text' name='voornaam' value="<?php echo $_POST['voornaam']; ?>" required></p>
                 </div>
                 <div class="col-md-3">
-                    Voorletters<br /><input class="form-control" type='text' name='voorletters' required>
+                    Voorletters <span class="required">*</span><br /><input class="form-control" type='text' name='voorletters' value="<?php echo $_POST['voorletters']; ?>" required>
                 </div>
                 <div class="col-md-3">
+<<<<<<< HEAD
                     <p>Tussenvoegsel<br /><input class="form-control" type='text' name='tussenvoegsel'></p>
+=======
+                    <p>Tussenvoegsel<br /><input class="form-control" type='text' name='tussenvoegsel' value="<?php echo $_POST['tussenvoegsel']; ?>"></p>
+>>>>>>> origin/master
                 </div>
                 <div class="col-md-6">
-                    <p>Achternaam<br /><input class="form-control" type='text' name='achternaam' required></p>
+                    <p>Achternaam <span class="required">*</span><br /><input class="form-control" type='text' name='achternaam' value="<?php echo $_POST['achternaam']; ?>" required></p>
                 </div>
                 <div class="col-md-5">
-                    <p>Adres<br /><input class="form-control" type='text' name='adres' required></p>
+                    <p>Adres <span class="required">*</span><br /><input class="form-control" type='text' name='adres' value="<?php echo $_POST['adres']; ?>" required></p>
                 </div>
                 <div class="col-md-2">
-                    <p>Postcode<br /><input class="form-control" type='text' name='postcode' required></p>
+                    <p>Postcode <span class="required">*</span><br /><input class="form-control" type='text' name='postcode' value="<?php echo $_POST['postcode']; ?>" required></p>
                 </div>
                 <div class="col-md-5">
+<<<<<<< HEAD
                     <p>Woonplaats<br /><input class="form-control" type='text' name='woonplaats' required></p>
+=======
+                    <p>Woonplaats <span class="required">*</span><br /><input class="form-control" type='text' name='woonplaats' value="<?php echo $_POST['woonplaats']; ?>" required></p>
+>>>>>>> origin/master
                 </div>
                 <div class="col-md-6">
-                    <p>Telefoonnummer<br /><input class="form-control" type='tel' name='tel'></p>
+                    <p>Telefoonnummer <br /><input class="form-control" type='tel' name='tel' value="<?php echo $_POST['tel']; ?>"></p>
                 </div>
                 <div class="col-md-6">
-                    <p>Mobiel<br /><input class="form-control" type='text' name='mobiel'></p>
+                    <p>Mobiel<br /><input class="form-control" type='text' name='mobiel' value="<?php echo $_POST['mobiel']; ?>"></p>
                 </div>
                 <div class="col-md-12">
-                    <p>E-mail<br /><input class="form-control" type='email' name='email' required></p>
+                    <p>E-mail <span class="required">*</span><br /><input class="form-control" type='email' name='email' value="<?php echo $_POST['email']; ?>" required></p>
                 </div>
                 <div class="col-md-4">
-                    <p>Geboorte datum<br /><input class="form-control" type='date' name='date' required></p>
+                    <p>Geboorte datum <span class="required">*</span><br /><input class="form-control" type='date' name='date' value="<?php echo $_POST['date']; ?>" required></p>
                 </div>
                 <div class="col-md-8">
-                    <p>Geslacht
+                    <p>Geslacht <span class="required">*</span>
                         <br />
                         <select id="geslacht" name="geslacht" class="form-control">
+<<<<<<< HEAD
                             <option value="Man">Man</option>
                             <option value="Vrouw">Vrouw</option>
+=======
+                            <option <?php if($_POST['geslacht'] == "Man"){ echo 'selected'; } ?> value="Man">Man</option>
+                            <option <?php if($_POST['geslacht'] == "Vrouw"){ echo 'selected'; } ?> value="Vrouw">Vrouw</option>
+>>>>>>> origin/master
                         </select>
                     </p>
                 </div>
                 <div class="col-md-12">
-                    <p>Niveau
+                    <p>Niveau <span class="required">*</span>
                         <br />
                         <select id="niveau" name="niveau"  class="form-control">
+<<<<<<< HEAD
                             <option value="Beginner">Beginner</option>
                             <option value="Gevorderd">Gevorderd</option>
+=======
+                            <option <?php if($_POST['niveau'] == "Beginner"){ echo 'selected'; } ?> value="Beginner">Beginner</option>
+                            <option <?php if($_POST['niveau'] == "Gevorderd"){ echo 'selected'; } ?>  value="Gevorderd">Gevorderd</option>
+>>>>>>> origin/master
                         </select>
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <p>Password<br /><input class="form-control" type='password' name='password' required></p>
+                    <p>Password <span class="required">*</span><br /><input class="form-control" type='password' name='password' required></p>
                 </div>
                 <div class="col-md-6">
-                    <p>Re-Password<br /><input class="form-control" type='password' name='password' required></p>
+                    <p>Re-Password <span class="required">*</span><br /><input class="form-control" type='password' name='password1' required></p>
                 </div>
                 <div class="col-md-12">
                     <label for="message">Captcha <small>(Tegen bots)</small>:</label>
