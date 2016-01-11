@@ -21,6 +21,7 @@ class Cursussen extends Controller
     {
         parent::__construct();
         $this->language->load('Home');
+        $this->Database = new \Models\Db();
     }
 
     public function index()
@@ -28,8 +29,7 @@ class Cursussen extends Controller
         $data['title'] = $this->language->get('Cursussen');
         $data['home_message'] = $this->language->get('no message');
 
-
-
+        $data['Courses'] = $this->Database->getAllCourses();
         View::renderTemplate('header', $data);
         View::render('cursussen/overzicht', $data);
         View::renderTemplate('footer', $data);

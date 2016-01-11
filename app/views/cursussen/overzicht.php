@@ -15,6 +15,7 @@
     <div class="page-header">
         <h1 style="text-align: center;">In de planning</h1>
     </div>
+
         <div class="AgendaItem">
             <img src="/zeilschooldewaai/app/templates/default/img/boten/boot1.png" />
             <h3>Beginners cursus</h3>
@@ -174,6 +175,7 @@
     <div class="page-header">
         <h1>Kies een cursus</h1>
     </div>
+
     <?php if (\Helpers\Session::get('id')) { ?>
        <button class="btn btn-success btnstap" id="stap1">Stap 1</button> <button id="stap2" class="btnstap btn btn-default disabled">Stap 2</button> <button id="stap3" class="btnstap btn btn-default disabled">Stap 3</button> <button id="stap4" class="btnstap btn btn-default disabled">Stap 4</button>
         <table class="table table-hover"  id="CursusTable">
@@ -181,35 +183,36 @@
                 <tr>
                     <th width="40px">#</th>
                     <th>Naam cursus</th>
+                    <th width="100px">Prijs</th>
                     <th width="150px">Begindatum</th>
                     <th width="150px">Einddatum</th>
                 </tr>
             </thead>
             <tbody>
-                <tr data-cursusid="1" class="CursusRij">
-                    <td><input type="radio" id="cursus1" name="cursus" value="1" /><div class="SelectArrow" id="CursusIcon1" ></div></td>
-                    <td>Beginnerscursus voor Beginners</td>
-                    <td>10 januari 2016</td>
-                    <td>15 januari 2016</td>
-                </tr>
-                <tr data-cursusid="2" class="CursusRij">
-                    <td><input type="radio" id="cursus2" name="cursus" value="2" /><div class="SelectArrow" id="CursusIcon2" ></div></td>
-                    <td>Waddentocht</td>
-                    <td>21 februari 2016</td>
-                    <td>26 februari 2016</td>
-                </tr>
-                <tr data-cursusid="3" class="CursusRij">
-                    <td><input type="radio" id="cursus3" name="cursus" value="3" /><div class="SelectArrow" id="CursusIcon3" ></div></td>
-                    <td>Ervaren cursus</td>
-                    <td>13 maart 2016</td>
-                    <td>18 maart 2016</td>
-                </tr>
-                <tr data-cursusid="4" class="CursusRij">
-                    <td><input type="radio" id="cursus4" name="cursus" value="4" /><div class="SelectArrow" id="CursusIcon4" ></div></td>
-                    <td>Zomertocht</td>
-                    <td>04 April 2016</td>
-                    <td>10 April 2016</td>
-                </tr>
+                <?php
+                    setlocale(LC_TIME, 'NL_nl');
+                    foreach($data['Courses'] as $key => $value){
+                        $id = $value->cursus_id;
+                        $naam = $value->cursusnaam;
+                        $beschrijving = $value->cursusomschrijving;
+                        $prijs = $value->cursusprijs;
+                        $startdatum = $value->startdatum;
+                        $startdatum = date("m M Y",strtotime($startdatum));
+                        $einddatum = $value->einddatum;
+                        $einddatum = date("j M Y",strtotime($einddatum));
+
+                        echo '
+                            <tr data-cursusid="'.$id.'" class="CursusRij" title="'.$beschrijving.'">
+                                <td><input type="radio" id="cursus'.$id.'" name="cursus" value="'.$id.'" /><div class="SelectArrow" id="CursusIcon'.$id.'" ></div></td>
+                                <td>'.$naam.'</td>
+                                <td>&euro; '.$prijs.'</td>
+                                <td>'.$startdatum.'</td>
+                                <td>'.$einddatum.'</td>
+                            </tr>
+                        ';
+                    }
+                ?>
+
 
             </tbody>
         </table>
