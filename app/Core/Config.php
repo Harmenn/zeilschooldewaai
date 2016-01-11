@@ -65,17 +65,17 @@ class Config
         /**
          * Database name.
          */
-        define('DB_NAME', 'zeilschooldewaai');
+        define('DB_NAME', 'deb67958_zeilschooldewaai');
 
         /**
          * Database username.
          */
-        define('DB_USER', 'root');
+        define('DB_USER', 'deb67958_school');
 
         /**
          * Database password.
          */
-        define('DB_PASS', '');
+        define('DB_PASS', 'ijY9Oguy');
 
         /**
          * PREFER to be used in database calls default is smvc_

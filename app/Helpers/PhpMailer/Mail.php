@@ -20,7 +20,7 @@ class Mail extends PhpMailer
      *
      * @var string $From set sender email
      */
-    public $From     = 'noreply@localhost';
+    public $From     = 'noreply@zeilschooldewaai.nl';
 
     /**
      * FromName
@@ -55,14 +55,14 @@ class Mail extends PhpMailer
      *
      * @var string $Username set username
      */
-    //public $Username = 'email';
+    //public $Username = 'zeilschooldewaai1@gmail.com';
 
     /**
      * Password
      *
      * @var string $Password set password
      */
-    //public $Password = 'password';
+    //public $Password = 'dewaaizeilschool';
 
     /**
      * SMTPSecure

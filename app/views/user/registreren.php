@@ -2,19 +2,16 @@
 /**
  * Sample layout
  */
-
 use Helpers\Assets;
 use Helpers\Url;
 use Helpers\Hooks;
-
 //initialise hooks
 $hooks = Hooks::get();
 ?>
     <div class="page-header">
         <h1>Registreren</h1>
     </div>
-
-    <form action="submit" method="post">
+    <form action="" method="post">
         <div class="row">
             <div class="col-md-7">
                 <div class="col-md-12">
@@ -23,11 +20,9 @@ $hooks = Hooks::get();
                 <div class="col-md-3">
                     Voorletters<br /><input class="form-control" type='text' name='voorletters' required>
                 </div>
-
                 <div class="col-md-3">
-                    <p>Tussenvoegsel<br /><input class="form-control" type='text' name='t/v'></p>
+                    <p>Tussenvoegsel<br /><input class="form-control" type='text' name='tussenvoegsel'></p>
                 </div>
-
                 <div class="col-md-6">
                     <p>Achternaam<br /><input class="form-control" type='text' name='achternaam' required></p>
                 </div>
@@ -38,7 +33,7 @@ $hooks = Hooks::get();
                     <p>Postcode<br /><input class="form-control" type='text' name='postcode' required></p>
                 </div>
                 <div class="col-md-5">
-                    <p>Woonplaats<br /><input class="form-control" type='text' name='Woonplaats' required></p>
+                    <p>Woonplaats<br /><input class="form-control" type='text' name='woonplaats' required></p>
                 </div>
                 <div class="col-md-6">
                     <p>Telefoonnummer<br /><input class="form-control" type='tel' name='tel'></p>
@@ -55,7 +50,7 @@ $hooks = Hooks::get();
                 <div class="col-md-8">
                     <p>Geslacht
                         <br />
-                        <select id="Geslacht" name="Geslacht" class="form-control">
+                        <select id="geslacht" name="geslacht" class="form-control">
                             <option value="Man">Man</option>
                             <option value="Vrouw">Vrouw</option>
                         </select>
@@ -64,7 +59,7 @@ $hooks = Hooks::get();
                 <div class="col-md-12">
                     <p>Niveau
                         <br />
-                        <select id="Niveau" name="Niveau"  class="form-control">
+                        <select id="niveau" name="niveau"  class="form-control">
                             <option value="Beginner">Beginner</option>
                             <option value="Gevorderd">Gevorderd</option>
                         </select>
@@ -82,7 +77,7 @@ $hooks = Hooks::get();
                 </div>
                 <div class="col-md-12">
                     <br />
-                    <button class="btn btn-info" type="submit">Registreren</button>
+                    <button class="btn btn-primary" type="submit">Registreren</button>
                 </div>
             </div>
             <div class="col-md-5">
@@ -90,7 +85,3 @@ $hooks = Hooks::get();
             </div>
         </div>
     </form>
-
-
-
-

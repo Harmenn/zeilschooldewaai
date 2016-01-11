@@ -30,6 +30,36 @@ class Registreren extends Controller
         $this->registreren = new \Models\Db();
     }
 
+    public function sendValidateMail($email)
+    {
+
+        $url = md5($email);
+
+        $mail = new \Helpers\PhpMailer\Mail();
+        $mail->addAddress($email);
+        $mail->subject('Zeilschool de waai validatie');
+        $mail->body("Hallo, door op deze <a href='http://ruudlouwerse.nl/zeilschooldewaai/registreren/".$url."'>Link</a> te klikken activeert u uw account ");
+        $mail->Send();
+        echo "done";
+    }
+
+    public function post($slug)
+    {
+        $check = $this->registreren->validateUser($slug);
+        if(count($check) == 1){
+            $this->registreren->givePrivilage($check[0]->klant_id);
+        }
+
+        \Helpers\Url::redirect('activatie');
+    }
+
+    public function activatie()
+    {
+        View::renderTemplate('header', $data);
+        View::render('user/activatie', $data);
+        View::renderTemplate('footer', $data);
+    }
+
     public function index()
     {
         $data['title'] = $this->language->get('Registreren');
@@ -38,7 +68,7 @@ class Registreren extends Controller
         $voorletters = $_POST['voorletters'];
         $geslacht = $_POST['geslacht'];
         $voornaam = $_POST['voornaam'];
-        $tussenvoegsels = $_POST['tv'];
+        $tussenvoegsel = $_POST['tussenvoegsel'];
         $achternaam = $_POST['achternaam'];
         $adres = $_POST['adres'];
         $postcode = $_POST['postcode'];
@@ -51,14 +81,10 @@ class Registreren extends Controller
         $wachtwoord = sha1($_POST["password"]);
         $url = "leeg";
         
-        $this->registreren->insertUsers($voorletters, $geslacht, $voornaam, $tussenvoegsels, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau, $wachtwoord, $url, 0);
-        
-        $mail = new \Helpers\PhpMailer\Mail();
-        $mail->setFrom('noreply@localhost');
-        $mail->addAddress('ruudlouwerse@live.nl');
-        $mail->subject('Important Email');
-        $mail->body("<h1>Hey</h1><p>I like this <b>Bold</b> Text!</p>");
-        $mail->send();
+        //$this->registreren->insertUsers($voorletters, $geslacht, $voornaam, $tussenvoegsels, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau, $wachtwoord, $url, 0);
+        if ($_POST) {
+            $this->sendValidateMail($email);
+        }        
 
         View::renderTemplate('header', $data);
         View::render('user/registreren', $data);

@@ -26,6 +26,8 @@ Router::any('cursussen', 'Controllers\Cursussen@index');
 /* User sectie */
 Router::any('login', 'Controllers\Login@index');
 Router::any('registreren', 'Controllers\Registreren@index');
+Router::get('registreren/(:all)', 'Controllers\Registreren@post');
+Router::any('activatie', 'Controllers\Registreren@activatie');
 Router::any('profiel', 'Controllers\Profiel@index');
 Router::any('loguit', 'Controllers\Login@loguit');
 
