@@ -48,19 +48,29 @@ class Registreren extends Controller
         $email = $_POST['email'];       
         $niveau = $_POST['niveau'];
         $geboortedatum = $_POST['date'];
-        $wachtwoord = sha1($_POST["password"]);
+        $wachtwoord = $_POST["password"];
+        $wachtwoord1 = $_POST["password1"];
         $url = "leeg";
+        $form_captcha = $_POST['g-recaptcha-response'];
         
         
    
             if ($_POST)
-            {
-                if(!empty($_POST['geslacht']) && !empty($_POST['voorletters']) && !empty($_POST['voornaam']) && !empty($_POST['tussenvoegsel']) && !empty($_POST['achternaam']) && !empty($_POST['adres']) && !empty($_POST['postcode']) && !empty($_POST['woonplaats']) && !empty($_POST['email']) && !empty($_POST['niveau']) && !empty($_POST['date']) && !empty($_POST['password'])){
-                    $this->registreren->insertUsers($geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $niveau, $geboortedatum, $wachtwoord, $url);
-                    \Helpers\Url::redirect('home');
+            {   
+                if($form_captcha == 0){
+                    $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>De captcha is niet ingevuld.</div>';
+                }else if(!empty($_POST['geslacht']) && !empty($_POST['voorletters']) && !empty($_POST['voornaam']) && !empty($_POST['achternaam']) && !empty($_POST['adres']) && !empty($_POST['postcode']) && !empty($_POST['woonplaats']) && !empty($_POST['email']) && !empty($_POST['niveau']) && !empty($_POST['date']) && !empty($_POST['password'])){
+                    if($wachtwoord == $wachtwoord1){
+                        $wachtwoord = sha1($_POST["password"]);
+                        $this->registreren->insertUsers($geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $niveau, $geboortedatum, $wachtwoord, $url);
+                        \Helpers\Url::redirect('login');
+                    }else{
+                        $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>De wachtwoorden zijn niet hetzelfde.</div>';
+                    }
+
                 }
                 else{
-                    
+                    $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>De captcha of alle velden zijn niet allemaal ingevuld.</div>';
                 }
             }
         
