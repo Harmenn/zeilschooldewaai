@@ -231,6 +231,7 @@
         <br />
         <label>Opmerkingen / Vragen / Voorkeur</label>
         <textarea class="form-control" id="Comments" name="comments"></textarea>
+        <span id="CountDown">250</span>
     </div>
     <div class="spacer" style="clear: both;"></div>
     <br />
@@ -246,7 +247,7 @@
     <div class="col-md-7">
         <br /><br />
         <p>
-            Dit is de laatste stap, Als u op Schrijf in klikt<br /> wordt u ingeschreven in de aangevraagde cursus.
+            Dit is de laatste stap, Als u op "Inschrijven" klikt<br /> wordt u ingeschreven in de aangevraagde cursus.
         </p>
         <br />
         <input type="checkbox" alt="Ik accepteer de voorwaarden" name="voorwaarden" />

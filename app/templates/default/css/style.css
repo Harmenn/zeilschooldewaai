@@ -181,6 +181,14 @@ textarea{
 	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 	transform: rotate(90deg);
 }
+
+#CountDown{
+	float: right;
+	margin-top: -23px;
+	margin-right: 10px;
+	color: #555;
+	font-weight: 600;
+}
 /* Registreren pagina
 ----------------------------------------------------------------- */
 @media screen and (max-width: 992px) {
