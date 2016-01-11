@@ -35,7 +35,6 @@ class Registreren extends Controller
         $data['title'] = $this->language->get('Registreren');
         $data['home_message'] = $this->language->get('home_message');
         
-        //if()
         $geslacht = $_POST['geslacht'];
         $voorletters = $_POST['voorletters'];
         $voornaam = $_POST['voornaam'];
@@ -52,12 +51,23 @@ class Registreren extends Controller
         $wachtwoord = sha1($_POST["password"]);
         $url = "leeg";
         
-        $this->registreren->insertUsers($geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $niveau, $geboortedatum, $wachtwoord, $url);
+        
+   
+            if ($_POST)
+            {
+                if(!empty($_POST['geslacht']) && !empty($_POST['voorletters']) && !empty($_POST['voornaam']) && !empty($_POST['tussenvoegsel']) && !empty($_POST['achternaam']) && !empty($_POST['adres']) && !empty($_POST['postcode']) && !empty($_POST['woonplaats']) && !empty($_POST['email']) && !empty($_POST['niveau']) && !empty($_POST['date']) && !empty($_POST['password'])){
+                    $this->registreren->insertUsers($geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $niveau, $geboortedatum, $wachtwoord, $url);
+                    \Helpers\Url::redirect('home');
+                }
+                else{
+                    
+                }
+            }
         
         View::renderTemplate('header', $data);
         View::render('user/registreren', $data);
         View::renderTemplate('footer', $data);
         
     }
-    \Helpers\Url::redirect('home');
+    
 }
