@@ -63,19 +63,19 @@ class Config
         define('DB_HOST', 'localhost');
 
         /**
-         * Database name.
+         * Database name.   deb67958_
          */
-        define('DB_NAME', 'deb67958_zeilschooldewaai');
+        define('DB_NAME', 'zeilschooldewaai');
 
         /**
          * Database username.
          */
-        define('DB_USER', 'deb67958_school');
+        define('DB_USER', 'root');
 
         /**
          * Database password.
          */
-        define('DB_PASS', 'ijY9Oguy');
+        define('DB_PASS', '');
 
         /**
          * PREFER to be used in database calls default is smvc_

@@ -25,7 +25,7 @@
 		}
 		public function insertUsers($geslacht, $voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $niveau, $geboortedatum, $wachtwoord, $url)
 		{
-			$sql = "INSERT INTO `deb67958_zeilschooldewaai`.`klanten` (`klant_id`, `geslacht`, `voorletters`, `voornaam`, `tussenvoegsel`, `achternaam`, `adres`, `postcode`, `woonplaats`, `telefoonnummer`, `mobiel`, `email`, `geboortedatum`, `niveau`, `wachtwoord`, `url`, `priviledged`) 
+			$sql = "INSERT INTO `zeilschooldewaai`.`klanten` (`klant_id`, `geslacht`, `voorletters`, `voornaam`, `tussenvoegsel`, `achternaam`, `adres`, `postcode`, `woonplaats`, `telefoonnummer`, `mobiel`, `email`, `geboortedatum`, `niveau`, `wachtwoord`, `url`, `priviledged`) 
 			VALUES (NULL, '$voorletters', '$geslacht', '$voornaam', '$tussenvoegsels', '$achternaam', '$adres', '$postcode', '$woonplaats', 'telefoonnummer', '$mobiel', '$email', '$geboortedatum', '$niveau', '$wachtwoord', '$url', '0'); ";
 			$this->db->raw($sql);
 		}
@@ -41,11 +41,9 @@
 		{
 			$result = $this->db->raw("UPDATE klanten SET priviledged=1, url=NULL WHERE klant_id='$id';");
 		}
-			$sql = "INSERT INTO `zeilschooldewaai`.`klanten` (`klant_id`, `geslacht`, `voorletters`, `voornaam`, `tussenvoegsel`, `achternaam`, `adres`, `postcode`, `woonplaats`, `telefoonnummer`, `mobiel`, `email`, `niveau`, `geboortedatum` , `wachtwoord`, `url`, `priviledged`) 
-			VALUES (NULL, '$geslacht', '$voorletters', '$voornaam', '$tussenvoegsel', '$achternaam', '$adres', '$postcode', '$woonplaats', '$telefoonnummer', '$mobiel', '$email', '$niveau', '$geboortedatum' , '$wachtwoord', '$url', '0'); ";
-			$this->db->raw($sql);
-		}
-		public function getAllCourses(){
+
+		public function getAllCourses()
+		{
 			$result = $this->db->select("SELECT * FROM cursussen");
 			return $result;
 		}
