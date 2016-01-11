@@ -17,6 +17,12 @@
 			return $result;
 		}
 
+		public function checkEmail($email){
+			$result = $this->db->select("SELECT email FROM klanten WHERE email = '$email'");
+			
+			return $result;
+		}
+
 		public function pushUsers($user)
 		{
 			$result = $this->db->select("SELECT wachtwoord, klant_id, priviledged FROM klanten WHERE email = '$user'");

@@ -93,10 +93,18 @@ class Registreren extends Controller
                 if($wachtwoord == $wachtwoord1)
                 {
                     $wachtwoord = sha1($_POST["password"]);
-                    $url = $this->sendValidateMail($email);
-                    $this->registreren->insertUsers($geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $niveau, $geboortedatum, $wachtwoord, $url);
 
-                    \Helpers\Url::redirect('login');
+                    $check = $this->registreren->checkEmail($email);
+                    if (count($check) == 0) 
+                    {
+                        $url = $this->sendValidateMail($email);
+                        $this->registreren->insertUsers($geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $niveau, $geboortedatum, $wachtwoord, $url);
+                        \Helpers\Url::redirect('login');
+                    }
+                    else
+                    {
+                        $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>Uw email is al geregeristreerd.</div>';
+                    }
                 }
                 else
                 {
