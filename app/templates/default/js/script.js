@@ -21,10 +21,17 @@ $( "#ResponsiveTrigger" ).click(function() {
     });
 });
 
-function ChangeContent(content){
-    $(".Subject").slideUp( "500", function() {  });
-    $("#" + content).slideDown( "500", function() {  });
-}
+$(".ContentBtn").click(function() {
+    if ( $( this ).hasClass( "active" ) ) {
+        console.log('NEUP');
+    }else{
+        $(".ContentBtn").removeClass('active');
+        $(this).addClass('active');
+        var content = $(this).attr('data-content');
+        $(".Subject").slideUp( "500", function() {  });
+        $("#" + content).slideDown( "500", function() {  });
+    }
+});
 
 $(".CursusRij").click(function() {
     $(".SelectArrow").removeClass('active');
