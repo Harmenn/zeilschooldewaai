@@ -165,9 +165,9 @@
         </div>
 
         <?php if (\Helpers\Session::get('id')) { ?>
-           <button type="button" class="btn btn-success" id="stap1">Keuze</button>
-            <button type="button" id="stap2" class="btnstap btn btn-default disabled">Gegevens</button>
-            <button type="button" id="stap3" class="btnstap btn btn-default disabled">Overzicht</button>
+           <button type="button" class="btn btn-success" id="stap1">1. Keuze</button>
+            <button type="button" id="stap2" class="btnstap btn btn-default disabled">2. Gegevens</button>
+            <button type="button" id="stap3" class="btnstap btn btn-default disabled">3. Overzicht</button>
             <table class="table table-hover"  id="CursusTable">
                 <thead>
                     <tr>
@@ -187,7 +187,7 @@
                             $beschrijving = $value->cursusomschrijving;
                             $prijs = $value->cursusprijs;
                             $startdatum = $value->startdatum;
-                            $startdatum = date("m M Y",strtotime($startdatum));
+                            $startdatum = date("j M Y",strtotime($startdatum));
                             $einddatum = $value->einddatum;
                             $einddatum = date("j M Y",strtotime($einddatum));
 
@@ -215,24 +215,29 @@
 
     <div id="stap2_inschrijven" class="Subject" style="display: none">
         <div class="page-header">
-            <h1>Benodigde informatie</h1>
+            <h1>2. Gegevens</h1>
         </div>
-        <button type="button" class="btn btn-default btnstap" id="stap1">Keuze</button>
-        <button type="button" id="stap2" class=" btn btn-success">Gegevens</button>
-        <button id="stap3" type="button" class="btnstap btn btn-default disabled">Overzicht</button>
+        <div id="messages"></div>
+
+        <button type="button" class="btn btn-default btnstap" id="stap1">1. Keuze</button>
+        <button type="button" id="stap2" class=" btn btn-success">2. Gegevens</button>
+        <button id="stap3" type="button" class="btnstap btn btn-default disabled">3. Overzicht</button>
         <br />
         <div class="col-md-7">
             <br /><br />
             <p>
-                uiteraard hebben wij uw gegevens al waardoor u alleen<br /> nog maar uw opmerkingen hoeft in te vullen.
+                Uiteraard hebben wij uw gegevens al waardoor u alleen<br /> nog maar uw opmerkingen hoeft in te vullen.
             </p>
             <br />
+            <label>Uw wachtwoord <i title="Dit is om te voorkomen dat de verkeerde personen aan de cursussen gekoppeld worden." class="fa fa-question-circle"></i></label>
+            <input type="password" class="form-control" id="Password" name="password">
+
             <label>Opmerkingen / Vragen / Voorkeur</label>
             <textarea class="form-control" id="Comments" name="comments"></textarea>
             <span id="CountDown">250</span>
             <br />
             <input type="checkbox" alt="Ik accepteer de voorwaarden" id="voorwaarden" name="voorwaarden" />
-            <label id="voorwaardenLabel" for="voorwaarden">Ik heb de voorwaarden gelezen en ga hiermee akkoord.</label><br />
+            <label id="voorwaardenLabel" for="voorwaarden" style="font-weight: normal;">Ik heb de voorwaarden gelezen en ga hiermee akkoord.</label><br />
             <input type="submit" class="btn btn-primary" id="VerstuurKnop" name="Verstuur" value="Inschrijven"/>
         </div>
         <div class="spacer" style="clear: both;"></div>
@@ -245,13 +250,38 @@
 
     <div id="stap3_inschrijven" class="Subject" style="display: none">
         <div class="page-header">
-            <h1>Overzicht</h1>
+            <h1>3. Overzicht</h1>
         </div>
-        <button type="button" class="btn btn-default btnstap" id="stap1">Keuze</button>
-        <button type="button" id="stap2" class="btnstap btn btn-default">Gegevens</button>
-        <button id="stap3" type="button" class=" btn btn-success">Overzicht</button>
+        <button type="button" class="btn btn-default disabled" id="stap1">1. Keuze</button>
+        <button type="button" id="stap2" class=" btn btn-default disabled">2. Gegevens</button>
+        <button id="stap3" type="button" class=" btn btn-success">3. Overzicht</button>
         <br />
         <div class="col-md-7">
+            <Br />
+            <div class="alert alert-success" role="alert">
+                <h2>Gefeliciteerd.</h2>
+                <p>
+                    u heeft zich succesvol ingeschreven voor de cursus.
+                </p>
+            </div>
+            <table class="table">
+                <tr>
+                    <th>Cursus</th>
+                    <td id="gekozenCursusnaam"></td>
+                </tr>
+                <tr>
+                    <th>Prijs</th>
+                    <td id="gekozenCursusprijs"></td>
+                </tr>
+                <tr>
+                    <th>Omschrijving</th>
+                    <td id="gekozenCursusomschrijving"></td>
+                </tr>
+                <tr>
+                    <th>Datum</th>
+                    <td><b><span id="gekozenCursusbegin"></span></b> tot <b><span id="gekozenCursuseind"></span></b></td>
+                </tr>
+            </table>
         </div>
         <div class="spacer" style="clear: both;"></div>
         <br />

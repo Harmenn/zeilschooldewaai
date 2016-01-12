@@ -41,6 +41,7 @@ $(".btnstap").click(function() {
     if ( $( this ).hasClass( "disabled" ) ) {
         console.log('test');
     }else{
+        $("#messages").html('');
         var stap = $(this).attr('id');
         console.log(stap);
         $(".Subject").slideUp( "500", function() {  });
@@ -57,20 +58,35 @@ $("#Comments").keyup(function() {
 
 $('#CursusForm').submit(function (e) {
     e.preventDefault();
-
+    $("#messages").html('');
 
     $.post( "/zeilschooldewaai/app/api/cursussen.php?action=1", $('form').serialize())
         .done(function( data ) {
             console.log('==== Data =====');
-            console.log(data);
-            if(data != 'voorwaarden niet geaccepteerd'){
-                //$(".Subject").slideUp( "500", function() {  });
-                //$("#stap3_inschrijven").slideDown( "500", function() {  });
-            }else{
+            if(data == 'voorwaarden niet geaccepteerd'){
                 $("#voorwaardenLabel").css('color','#b20000');
                 $("#voorwaardenLabel").attr('title','U moet eerst de voorwaarden accepteren');
                 $("#voorwaarden").css('border','#b20000');
+            }else if(data == 'Inschrijving bestaat al'){
+                $("#messages").html('');
+                $("#messages").html('<div class="alert alert-danger" role="alert">Deze inschrijving bestaat al.</div>');
+            } else if(data == 'Wachtwoord verkeerd') {
+                $("#messages").html('');
+                $("#messages").html('<div class="alert alert-danger" role="alert">Wachtwoord incorrect.</div>');
+            }else{
+                $(".Subject").slideUp( "500", function() {  });
+                $("#stap3_inschrijven").slideDown( "500", function() {  });
+                data = JSON.parse(data);
+                data = data[0];
+                console.log(data.cursusnaam);
+
+                $("#gekozenCursusnaam").html(data.cursusnaam);
+                $("#gekozenCursusprijs").html('&euro; ' + data.cursusprijs);
+                $("#gekozenCursusomschrijving").html(data.cursusomschrijving);
+                $("#gekozenCursusbegin").html(data.startdatum);
+                $("#gekozenCursuseind").html(data.einddatum);
             }
+
 
         });
 });
