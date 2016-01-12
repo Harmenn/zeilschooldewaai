@@ -53,7 +53,7 @@ class Beheer extends Controller
         $result = $this->dbBeheer->updateData($tabel, $where);
     }
 
-    public function index()
+    public function beheer()
     {
         View::renderTemplate('header', $data);
         View::render('beheer/beheer', $data);

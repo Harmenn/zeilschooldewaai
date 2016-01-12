@@ -33,7 +33,7 @@ Router::any('profiel', 'Controllers\Profiel@index');
 Router::any('loguit', 'Controllers\Login@loguit');
 
 /* beheer sectie */
-Router::any('beheer', 'Controllers\Beheer@index');
+Router::any('beheer', 'Controllers\Beheer@beheer');
 
 /** Module routes. */
 $hooks = Hooks::get();
