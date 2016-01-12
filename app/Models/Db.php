@@ -53,20 +53,20 @@
 			return $result;
 		}
 
-		public function insertData($tabel){
-			$result = $this->db->select("SELECT * FROM $tabel");
+		public function insertData($tabel, $values){
+			$result = $this->db->raw("INSERT INTO $tabel VALUES ($values)");
 			
 			return $result;
 		}
 
-		public function updateData($tabel){
-			$result = $this->db->select("SELECT * FROM $tabel");
+		public function updateData($tabel, $values){
+			$result = $this->db->raw("UPDATE $tabel SET $values");
 			
 			return $result;
 		}
 
-		public function deleteData($tabel){
-			$result = $this->db->select("SELECT * FROM $tabel");
+		public function deleteData($tabel, $where){
+			$result = $this->db->delete($tabel, $where);
 			
 			return $result;
 		}
