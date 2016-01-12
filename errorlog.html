@@ -73,3 +73,53 @@
            <hr />
 <p>Error on Jan 11, 2016 14:12PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:13PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:21PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:23PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p>
 >>>>>>> origin/master
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jan 12, 2016 9:43AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42S02]: Base table or view not found: 1146 Table 'deb67958_zeilschooldewaai.klanten' doesn't exist</p>
+
+           <p><strong>Code:</strong> 42S02</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 82</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php(82): PDO->query('INSERT INTO `de...')
+#1 C:\xampp\htdocs\zeilschooldewaai\app\Models\Db.php(30): Helpers\Database->raw('INSERT INTO `de...')
+#2 C:\xampp\htdocs\zeilschooldewaai\app\Controllers\Registreren.php(97): Models\Db->insertUsers('Vrouw', 'b', 'beheerder', '', 'eerder', 'pannekoekendijk', '8565GT', 'Zwolle', '', '', 'beheerder@live....', 'Gevorderd', '1981-12-11', 'a94a8fe5ccb19ba...', '8363c50ed713227...')
+#3 [internal function]: Controllers\Registreren->index()
+#4 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(126): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(217): Core\Router::invokeObject('Controllers\\Reg...')
+#6 C:\xampp\htdocs\zeilschooldewaai\app\Core\routes.php(49): Core\Router::dispatch()
+#7 C:\xampp\htdocs\zeilschooldewaai\index.php(81): require('C:\\xampp\\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jan 12, 2016 9:47AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42S02]: Base table or view not found: 1146 Table 'deb67958_zeilschooldewaai.klanten' doesn't exist</p>
+
+           <p><strong>Code:</strong> 42S02</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 82</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php(82): PDO->query('INSERT INTO `de...')
+#1 C:\xampp\htdocs\zeilschooldewaai\app\Models\Db.php(30): Helpers\Database->raw('INSERT INTO `de...')
+#2 C:\xampp\htdocs\zeilschooldewaai\app\Controllers\Registreren.php(97): Models\Db->insertUsers('Vrouw', 'b', 'beheerder', '', 'eerder', 'pannekoekendijk', '8565GT', 'Zwolle', '', '', 'beheerder@live....', 'Gevorderd', '1981-12-11', 'a94a8fe5ccb19ba...', '8363c50ed713227...')
+#3 [internal function]: Controllers\Registreren->index()
+#4 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(126): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(217): Core\Router::invokeObject('Controllers\\Reg...')
+#6 C:\xampp\htdocs\zeilschooldewaai\app\Core\routes.php(49): Core\Router::dispatch()
+#7 C:\xampp\htdocs\zeilschooldewaai\index.php(81): require('C:\\xampp\\htdocs...')
+#8 {main}</pre>
+
+           <hr />

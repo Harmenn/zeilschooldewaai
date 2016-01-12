@@ -55,6 +55,8 @@ class Beheer extends Controller
 
     public function beheer()
     {
+        $data['title'] = $this->language->get('Beheer');
+
         View::renderTemplate('header', $data);
         View::render('beheer/beheer', $data);
         View::renderTemplate('footer', $data);
