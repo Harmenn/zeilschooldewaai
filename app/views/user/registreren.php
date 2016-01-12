@@ -1,10 +1,13 @@
+
 <?php
 /**
  * Sample layout
  */
+ 
 use Helpers\Assets;
 use Helpers\Url;
 use Helpers\Hooks;
+ 
 //initialise hooks
 $hooks = Hooks::get();
 ?>
@@ -17,16 +20,13 @@ $hooks = Hooks::get();
             top: -5px;
         }
     </style>
-
+ 
     <div class="page-header">
         <h1>Registreren</h1>
     </div>
-<<<<<<< HEAD
-=======
-
+ 
     <?php echo $data["melding"]; ?>
-
->>>>>>> origin/master
+ 
     <form action="" method="post">
         <div class="row">
             <div class="col-md-7" style="padding-left:0px;">
@@ -36,13 +36,11 @@ $hooks = Hooks::get();
                 <div class="col-md-3">
                     Voorletters <span class="required">*</span><br /><input class="form-control" type='text' name='voorletters' value="<?php echo $_POST['voorletters']; ?>" required>
                 </div>
+ 
                 <div class="col-md-3">
-<<<<<<< HEAD
-                    <p>Tussenvoegsel<br /><input class="form-control" type='text' name='tussenvoegsel'></p>
-=======
                     <p>Tussenvoegsel<br /><input class="form-control" type='text' name='tussenvoegsel' value="<?php echo $_POST['tussenvoegsel']; ?>"></p>
->>>>>>> origin/master
                 </div>
+ 
                 <div class="col-md-6">
                     <p>Achternaam <span class="required">*</span><br /><input class="form-control" type='text' name='achternaam' value="<?php echo $_POST['achternaam']; ?>" required></p>
                 </div>
@@ -53,11 +51,7 @@ $hooks = Hooks::get();
                     <p>Postcode <span class="required">*</span><br /><input class="form-control" type='text' name='postcode' value="<?php echo $_POST['postcode']; ?>" required></p>
                 </div>
                 <div class="col-md-5">
-<<<<<<< HEAD
-                    <p>Woonplaats<br /><input class="form-control" type='text' name='woonplaats' required></p>
-=======
                     <p>Woonplaats <span class="required">*</span><br /><input class="form-control" type='text' name='woonplaats' value="<?php echo $_POST['woonplaats']; ?>" required></p>
->>>>>>> origin/master
                 </div>
                 <div class="col-md-6">
                     <p>Telefoonnummer <br /><input class="form-control" type='tel' name='tel' value="<?php echo $_POST['tel']; ?>"></p>
@@ -75,13 +69,8 @@ $hooks = Hooks::get();
                     <p>Geslacht <span class="required">*</span>
                         <br />
                         <select id="geslacht" name="geslacht" class="form-control">
-<<<<<<< HEAD
-                            <option value="Man">Man</option>
-                            <option value="Vrouw">Vrouw</option>
-=======
                             <option <?php if($_POST['geslacht'] == "Man"){ echo 'selected'; } ?> value="Man">Man</option>
                             <option <?php if($_POST['geslacht'] == "Vrouw"){ echo 'selected'; } ?> value="Vrouw">Vrouw</option>
->>>>>>> origin/master
                         </select>
                     </p>
                 </div>
@@ -89,13 +78,8 @@ $hooks = Hooks::get();
                     <p>Niveau <span class="required">*</span>
                         <br />
                         <select id="niveau" name="niveau"  class="form-control">
-<<<<<<< HEAD
-                            <option value="Beginner">Beginner</option>
-                            <option value="Gevorderd">Gevorderd</option>
-=======
                             <option <?php if($_POST['niveau'] == "Beginner"){ echo 'selected'; } ?> value="Beginner">Beginner</option>
                             <option <?php if($_POST['niveau'] == "Gevorderd"){ echo 'selected'; } ?>  value="Gevorderd">Gevorderd</option>
->>>>>>> origin/master
                         </select>
                     </p>
                 </div>
