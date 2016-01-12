@@ -35,7 +35,7 @@ class Registreren extends Controller
         $mail->addAddress($email);
         $mail->subject('Zeilschool de waai validatie');
         $mail->body("Hallo, door op deze <a href='http://ruudlouwerse.nl/zeilschooldewaai/registreren/".$url."'>Link</a> te klikken activeert u uw account ");
-        //Stuurt de email naar de nieuwe klant.
+        //Stuurt de email naar de nieuwe klant (Weggeslashed doordat dit op localhost niet werkt).
         //$mail->Send();
         //Stuurt de url terug om in de database gezet te worden.
         return $url;
