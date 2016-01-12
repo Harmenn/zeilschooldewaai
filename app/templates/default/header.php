@@ -74,8 +74,18 @@ $hooks->run('afterBody');
 		if (\Helpers\Session::get('username')) {
 			?>
 			<a href="loguit"><div class="NavItem"><i class="fa fa-lock"></i> Uitloggen</div></a>
+			<?php
+				if (\Helpers\Session::get('rechten')==1) {
+			?>
 			<a href="profiel"><div class="NavItem <?php if($data['title'] == 'Profiel'){echo 'active';} ?>"><i class="fa fa-lock"></i> Profiel</div></a>
 			<?php
+				}
+				else
+				{
+			?>
+			<a href="beheer"><div class="NavItem <?php if($data['title'] == 'Beheer'){echo 'active';} ?>"><i class="fa fa-lock"></i> Beheer</div></a>
+			<?php
+				}
 		}
 		//Normale menu items.
 		else{ ?>
