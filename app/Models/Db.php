@@ -45,4 +45,29 @@
 			$result = $this->db->select("SELECT * FROM cursussen");
 			return $result;
 		}
+
+		//Beheer controller database acties.
+		public function userData($tabel){
+			$result = $this->db->select("SELECT * FROM $tabel");
+			
+			return $result;
+		}
+
+		public function insertData($tabel){
+			$result = $this->db->select("SELECT * FROM $tabel");
+			
+			return $result;
+		}
+
+		public function updateData($tabel){
+			$result = $this->db->select("SELECT * FROM $tabel");
+			
+			return $result;
+		}
+
+		public function deleteData($tabel){
+			$result = $this->db->select("SELECT * FROM $tabel");
+			
+			return $result;
+		}
 	}
