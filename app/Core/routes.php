@@ -31,6 +31,8 @@ Router::any('activatie', 'Controllers\Registreren@activatie');
 Router::any('profiel', 'Controllers\Profiel@index');
 Router::any('loguit', 'Controllers\Login@loguit');
 
+/* Beheer sectie */
+Router::any('beheer', 'Controllers\Beheer@index');
 
 /** Module routes. */
 $hooks = Hooks::get();
