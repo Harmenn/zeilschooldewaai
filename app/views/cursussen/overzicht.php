@@ -156,7 +156,7 @@
 ----------------------------------------------------------------------------- -->
 
 <form onsubmit="SubmitForm()" method="post" id="CursusForm" action="">
-    <input type="hidden" name="user_id" value="<?php echo \Helpers\Session::get('id'); ?>" />
+    <input type="hidden" name="user_id" id="user_id" value="<?php echo \Helpers\Session::get('id'); ?>" />
     <!-- Stap 1
     ----------------------------------------------------------------------------- -->
     <div id="stap1_inschrijven" class="Subject" style="display: none">

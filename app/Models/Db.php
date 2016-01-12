@@ -70,4 +70,11 @@
 			
 			return $result;
 		}
+
+		public function getCursus($id){
+			$result = $this->db->select("SELECT * FROM cursussen WHERE cursus_id = '$id'");
+
+			return $result;
+		}
+
 	}

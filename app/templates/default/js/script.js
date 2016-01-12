@@ -85,6 +85,24 @@ $('#CursusForm').submit(function (e) {
                 $("#gekozenCursusomschrijving").html(data.cursusomschrijving);
                 $("#gekozenCursusbegin").html(data.startdatum);
                 $("#gekozenCursuseind").html(data.einddatum);
+
+                console.log($("#Comments").val());
+                $.ajax({
+                    method: "POST",
+                    url: "/zeilschooldewaai/cursussen/validatie",
+                    data: {
+                        user_id: $("#user_id").val(),
+                        cursus_id: data.cursus_id,
+                        comment: $("#Comments").val()
+                    },
+                    success: function (data) {
+                        console.log('GEGEVENS VOOR MAIL');
+                        console.log(data);
+                    },
+                    done: function( data ) {
+                        console.log(data);
+                    }
+                });
             }
 
 
