@@ -28,7 +28,7 @@ class Beheer extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->beheer = new \Models\Db();
+        $this->dbBeheer = new \Models\Db();
     }
 
     public function getData($tabel)
@@ -56,6 +56,11 @@ class Beheer extends Controller
     public function beheer()
     {
         $data['title'] = $this->language->get('Beheer');
+
+        $result = $this->getData('klanten');
+        foreach ($result as $key) {
+            $data["users"] .= "<tr><td>".$key->voornaam."</td><td>".$key->tussenvoegsel."</td><td>".$key->achternaam."</td><td>".$key->email."</td></tr>";
+        }
 
         View::renderTemplate('header', $data);
         View::render('beheer/beheer', $data);

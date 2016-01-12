@@ -10,8 +10,9 @@ if (\Helpers\Session::get('rechten')==3)
 }
 elseif(\Helpers\Session::get('rechten')==2)
 {
+	echo "<table class='table table-hover'><thead></thead>".$data["users"]."</table>";
 ?>
-
+	
 
 <br />
 
