@@ -37,6 +37,7 @@ class Login extends Controller
                 {
                     \Helpers\Session::set('username', $user);
                     \Helpers\Session::set('id', $passw[0]->klant_id);
+                    \Helpers\Session::set('rechten', $passw[0]->priviledged);
                     \Helpers\Url::redirect('home');
                 }
                 else
@@ -54,6 +55,7 @@ class Login extends Controller
     {
         \Helpers\Session::destroy('username');
         \Helpers\Session::destroy('id');
+        \Helpers\Session::destroy('rechten');
         \Helpers\Url::redirect('home');
     }
 }

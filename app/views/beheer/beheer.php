@@ -4,11 +4,17 @@
  */
 
 use Core\Language;
-
+if (\Helpers\Session::get('rechten')==3) 
+{
+	echo "SuperAdmin";
+}
+elseif(\Helpers\Session::get('rechten')==2)
+{
 ?>
 
 
 <br />
+<<<<<<< HEAD
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#BeheerProfiel" onclick="ChangeContent('BeheerProfiel')" role="tab" data-toggle="tab">Beheer Profiel</a></li>
@@ -18,3 +24,12 @@ use Core\Language;
     <li role="presentation"><a href="#BeheerInstructeurs" role="tab"  onclick="ChangeContent('BeheerInstructeurs')" data-toggle="tab">Beheer Instructeurs</a></li>
     <li role="presentation"><a href="#CursistKoppelen" role="tab"  onclick="ChangeContent('CursistKoppelen')" data-toggle="tab">Cursist Koppelen</a></li>
 </ul>
+=======
+
+
+<?php }
+else
+{
+	echo "geen rechten";
+}
+>>>>>>> origin/master
