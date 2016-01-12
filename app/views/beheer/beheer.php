@@ -14,6 +14,7 @@ elseif(\Helpers\Session::get('rechten')==2)
 
 
 <br />
+
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#BeheerProfiel" onclick="ChangeContent('BeheerProfiel')" role="tab" data-toggle="tab">Beheer Profiel</a></li>
@@ -25,9 +26,10 @@ elseif(\Helpers\Session::get('rechten')==2)
 </ul>
 
 
-<?php 
-}
+
+<?php }
 else
 {
 	echo "geen rechten";
 }
+
