@@ -1,13 +1,20 @@
 <br />
 <!-- Navigatie
 ----------------------------------------------------------------------------- -->
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs TabNavigation" role="tablist">
     <li role="presentation" class="active"><a href="#agenda" class="ContentBtn" data-content="Agenda"  role="tab" data-toggle="tab">Deze maand</a></li>
     <li role="presentation"><a href="#Soorten" role="tab"  class="ContentBtn" data-content="beginners"  data-toggle="tab">Beginners cursus</a></li>
     <li role="presentation"><a href="#Soorten" role="tab"  class="ContentBtn" data-content="ervaren"  data-toggle="tab">Ervaren cursus</a></li>
     <li role="presentation"><a href="#Soorten" role="tab"  class="ContentBtn" data-content="wadtochten"  data-toggle="tab">Wadtochten</a></li>
     <li role="presentation"><a href="#Soorten" role="tab"  class="ContentBtn" data-content="stap1_inschrijven"  data-toggle="tab">Inschrijven</a></li>
 </ul>
+<select class="form-control RespTabNav">
+    <option value="Agenda">Deze maand</option>
+    <option value="beginners">Beginners cursus</option>
+    <option value="ervaren">Ervaren cursus</option>
+    <option value="wadtochten">Wadtochten</option>
+    <option value="stap1_inschrijven">Inschrijven</option>
+</select>
 
 <!-- Wat er deze maand laten zien wordt.
 ----------------------------------------------------------------------------- -->
@@ -142,11 +149,11 @@
             <table class="table table-hover"  id="CursusTable">
                 <thead>
                     <tr>
-                        <th width="40px">#</th>
+                        <th width="40px" class="RespTableItem">#</th>
                         <th>Naam cursus</th>
                         <th width="100px">Prijs</th>
                         <th width="150px">Begindatum</th>
-                        <th width="150px">Einddatum</th>
+                        <th width="150px" class="RespTableItem">Einddatum</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -164,11 +171,11 @@
 
                             echo '
                                 <tr data-cursusid="'.$id.'" class="CursusRij" title="'.$beschrijving.'">
-                                    <td><input type="radio" id="cursus'.$id.'" name="cursus" value="'.$id.'" /><div class="SelectArrow" id="CursusIcon'.$id.'" ></div></td>
+                                    <td class="RespTableItem"><input type="radio" id="cursus'.$id.'" name="cursus" value="'.$id.'" /><div class="SelectArrow" id="CursusIcon'.$id.'" ></div></td>
                                     <td>'.$naam.'</td>
                                     <td>&euro; '.$prijs.'</td>
                                     <td>'.$startdatum.'</td>
-                                    <td>'.$einddatum.'</td>
+                                    <td class="RespTableItem">'.$einddatum.'</td>
                                 </tr>
                             ';
                         }
@@ -208,7 +215,7 @@
             <span id="CountDown">250</span>
             <br />
             <input type="checkbox" alt="Ik accepteer de voorwaarden" id="voorwaarden" name="voorwaarden" />
-            <label id="voorwaardenLabel" for="voorwaarden" style="font-weight: normal;">Ik heb de voorwaarden gelezen en ga hiermee akkoord.</label><br />
+            <label id="voorwaardenLabel" for="voorwaarden" style="font-weight: normal;">Ik ga  akkoord met de voorwaarden.</label><br />
             <input type="submit" class="btn btn-primary" id="VerstuurKnop" name="Verstuur" value="Inschrijven"/>
         </div>
         <div class="spacer" style="clear: both;"></div>

@@ -193,6 +193,28 @@ textarea{
 #voorwaarden{
 	zoom: 1.4;
 }
+
+.RespTabNav{
+	display: none;
+	font-size: 20px;
+	padding-top: 4px;
+	padding-bottom: 8px;
+}
+
+@media screen and (max-width: 670px){
+	.TabNavigation{
+		display: none;
+	}
+	.RespTabNav{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.RespTableItem{
+		display: none;
+	}
+}
 /* Registreren pagina
 ----------------------------------------------------------------- */
 @media screen and (max-width: 992px) {
@@ -280,6 +302,19 @@ textarea{
 }
 
 @media screen and (max-width: 600px){
+
+	.AgendaItem{
+		width: 43%;
+		margin: 5px 2%;
+		box-sizing: border-box;
+		float: left;
+		border: 1px solid #cccccc;
+		border-radius: 4px;
+		margin-bottom: 20px;
+		padding-bottom: 6px;
+	}
+}
+@media screen and (max-width: 450px){
 	.AgendaItem{
 		width: 98%;
 		margin: 5px 1%;
@@ -290,22 +325,16 @@ textarea{
 		border-radius: 0px;
 		margin-bottom: 20px;
 		padding-bottom: 6px;
+		height: auto;
 	}
 	.AgendaItem img{
-		width: 40%;
-		margin-right: 5%;
 		border-top-left-radius: 0px;
 		border-top-right-radius: 0px;
-		float: left;
 	}
 	.AgendaItem h3{
-		float: left;
-		width: 46%;
-		text-align: left;
 		margin: 8px 0px;
 		font-size: 18px;
 		font-weight: 600;
-		margin-bottom: 60px;
 	}
 	.AgendaItem p{
 		width: 100%;

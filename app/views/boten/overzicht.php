@@ -10,10 +10,15 @@ use Core\Language;
 
 <br />
 <!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs TabNavigation" role="tablist">
     <li role="presentation" class="active"><a href="#OnzeVloot" class="ContentBtn" data-content="OnzeVloot" role="tab" data-toggle="tab">Onze vloot</a></li>
     <li role="presentation"><a href="#Soorten" role="tab" class="ContentBtn" data-content="BootTypes" data-toggle="tab">Soorten Boten</a></li>
 </ul>
+
+<select class="form-control RespTabNav">
+    <option value="OnzeVloot">Onze vloot</option>
+    <option value="BootTypes">Soorten Boten</option>
+</select>
 
 <div id="OnzeVloot" class="Subject">
     <div class="page-header">

@@ -21,6 +21,7 @@ $( "#ResponsiveTrigger" ).click(function() {
     });
 });
 
+
 $(".ContentBtn").click(function() {
     if ( $( this ).hasClass( "active" ) ) {
         console.log('NEUP');
@@ -31,6 +32,12 @@ $(".ContentBtn").click(function() {
         $(".Subject").slideUp( "500", function() {  });
         $("#" + content).slideDown( "500", function() {  });
     }
+});
+
+$( ".RespTabNav" ).change(function() {
+    var content = $(this).val();
+    $(".Subject").slideUp( "500", function() {  });
+    $("#" + content).slideDown( "500", function() {  });
 });
 
 $(".CursusRij").click(function() {
