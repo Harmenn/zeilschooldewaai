@@ -71,7 +71,7 @@ $hooks->run('afterBody');
             
 		<?php
 		//Andere menu item als er een login geset is.
-		if (\Helpers\Session::get('username')) {
+		if (\Helpers\Session::get('id')) {
 			?>
 			<a href="loguit"><div class="NavItem"><i class="fa fa-lock"></i> Uitloggen</div></a>
 			<?php

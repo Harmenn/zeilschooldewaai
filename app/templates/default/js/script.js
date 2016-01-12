@@ -21,10 +21,17 @@ $( "#ResponsiveTrigger" ).click(function() {
     });
 });
 
-function ChangeContent(content){
-    $(".Subject").slideUp( "500", function() {  });
-    $("#" + content).slideDown( "500", function() {  });
-}
+$(".ContentBtn").click(function() {
+    if ( $( this ).hasClass( "active" ) ) {
+        console.log('NEUP');
+    }else{
+        $(".ContentBtn").removeClass('active');
+        $(this).addClass('active');
+        var content = $(this).attr('data-content');
+        $(".Subject").slideUp( "500", function() {  });
+        $("#" + content).slideDown( "500", function() {  });
+    }
+});
 
 $(".CursusRij").click(function() {
     $(".SelectArrow").removeClass('active');
@@ -85,6 +92,24 @@ $('#CursusForm').submit(function (e) {
                 $("#gekozenCursusomschrijving").html(data.cursusomschrijving);
                 $("#gekozenCursusbegin").html(data.startdatum);
                 $("#gekozenCursuseind").html(data.einddatum);
+
+                console.log($("#Comments").val());
+                $.ajax({
+                    method: "POST",
+                    url: "/zeilschooldewaai/cursussen/validatie",
+                    data: {
+                        user_id: $("#user_id").val(),
+                        cursus_id: data.cursus_id,
+                        comment: $("#Comments").val()
+                    },
+                    success: function (data) {
+                        console.log('GEGEVENS VOOR MAIL');
+                        console.log(data);
+                    },
+                    done: function( data ) {
+                        console.log(data);
+                    }
+                });
             }
 
 

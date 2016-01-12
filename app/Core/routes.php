@@ -22,7 +22,7 @@ Router::any('boten', 'Controllers\Boten@index');
 
 /* Cursussen sectie */
 Router::any('cursussen', 'Controllers\Cursussen@index');
-Router::any('cursussen', 'Controllers\Cursussen@validatie');
+Router::any('cursussen/validatie', 'Controllers\Cursussen@validatie');
 
 /* User sectie */
 Router::any('login', 'Controllers\Login@index');

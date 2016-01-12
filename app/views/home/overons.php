@@ -11,10 +11,10 @@ use Core\Language;
 <br />
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#OnzeVloot" onclick="ChangeContent('zeilschool')" role="tab" data-toggle="tab">De zeilschool</a></li>
-    <li role="presentation"><a href="#Soorten" role="tab"  onclick="ChangeContent('hostel')" data-toggle="tab">Het hostel</a></li>
-    <li role="presentation"><a href="#Soorten" role="tab"  onclick="ChangeContent('Route')" data-toggle="tab">Route</a></li>
-    <li role="presentation"><a href="#Soorten" role="tab"  onclick="ChangeContent('Kleding')" data-toggle="tab">Kleding</a></li>
+    <li role="presentation" class="active"><a href="#OnzeVloot" class="ContentBtn" data-content="zeilschool" role="tab" data-toggle="tab">De zeilschool</a></li>
+    <li role="presentation"><a href="#Soorten" role="tab"  class="ContentBtn" data-content="hostel" data-toggle="tab">Het hostel</a></li>
+    <li role="presentation"><a href="#Soorten" role="tab"  class="ContentBtn" data-content="Route" data-toggle="tab">Route</a></li>
+    <li role="presentation"><a href="#Soorten" role="tab"  class="ContentBtn" data-content="Kleding" data-toggle="tab">Kleding</a></li>
 
 </ul>
 
