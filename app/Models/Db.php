@@ -51,12 +51,15 @@
 			$result = $this->db->select("SELECT * FROM $tabel");
 			
 			return $result;
+            
 		}
 
 		public function insertData($tabel, $values){
 			$result = $this->db->raw("INSERT INTO $tabel VALUES ($values)");
 			
 			return $result;
+            
+            
 		}
 
 		public function updateData($tabel, $values){
