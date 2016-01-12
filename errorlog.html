@@ -23,4 +23,103 @@
 #8 {main}</pre>
 
            <hr />
-<p>Error on Jan 11, 2016 14:12PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:13PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:21PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:23PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p>
+<p>Error on Jan 11, 2016 14:12PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:13PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:21PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><p>Error on Jan 11, 2016 14:23PM - mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\wamp\www\zeilschooldewaai\app\Helpers\PhpMailer\PhpMailer.php on line 623</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jan 12, 2016 9:31AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Bruijnes', adres='Straatnaam 10', postcode='0000AA', woonplaats='Elburg', telefo' at line 1</p>
+
+           <p><strong>Code:</strong> 42000</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 82</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php(82): PDO->query('UPDATE klanten ...')
+#1 C:\xampp\htdocs\zeilschooldewaai\app\Models\Db.php(58): Helpers\Database->raw('UPDATE klanten ...')
+#2 C:\xampp\htdocs\zeilschooldewaai\app\Controllers\Profiel.php(48): Models\Db->updateUser('9', 'man', 'C', ''''""', '', 'Bruijnes', 'Straatnaam 10', '0000AA', 'Elburg', '', '', 'christiaanbruij...', '1997-07-16', '1')
+#3 [internal function]: Controllers\Profiel->index()
+#4 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(126): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(217): Core\Router::invokeObject('Controllers\Pro...')
+#6 C:\xampp\htdocs\zeilschooldewaai\app\Core\routes.php(46): Core\Router::dispatch()
+#7 C:\xampp\htdocs\zeilschooldewaai\index.php(81): require('C:\xampp\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jan 12, 2016 9:32AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Bruijnes', adres='Straatnaam 10', postcode='0000AA', woonplaats='Elburg', telefo' at line 1</p>
+
+           <p><strong>Code:</strong> 42000</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 82</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php(82): PDO->query('UPDATE klanten ...')
+#1 C:\xampp\htdocs\zeilschooldewaai\app\Models\Db.php(58): Helpers\Database->raw('UPDATE klanten ...')
+#2 C:\xampp\htdocs\zeilschooldewaai\app\Controllers\Profiel.php(48): Models\Db->updateUser('9', 'man', 'C', ''', '', 'Bruijnes', 'Straatnaam 10', '0000AA', 'Elburg', '', '', 'christiaanbruij...', '1997-07-16', '1')
+#3 [internal function]: Controllers\Profiel->index()
+#4 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(126): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(217): Core\Router::invokeObject('Controllers\Pro...')
+#6 C:\xampp\htdocs\zeilschooldewaai\app\Core\routes.php(46): Core\Router::dispatch()
+#7 C:\xampp\htdocs\zeilschooldewaai\index.php(81): require('C:\xampp\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jan 12, 2016 9:38AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Bruijnes', adres='Straatnaam 10', postcode='0000AA', woonplaats='Elburg', telefo' at line 1</p>
+
+           <p><strong>Code:</strong> 42000</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 82</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php(82): PDO->query('UPDATE klanten ...')
+#1 C:\xampp\htdocs\zeilschooldewaai\app\Models\Db.php(58): Helpers\Database->raw('UPDATE klanten ...')
+#2 C:\xampp\htdocs\zeilschooldewaai\app\Controllers\Profiel.php(52): Models\Db->updateUser('9', 'man', 'C', 'asdfsadf'', '', 'Bruijnes', 'Straatnaam 10', '0000AA', 'Elburg', '', '', 'christiaanbruij...', '1997-07-16', '1')
+#3 [internal function]: Controllers\Profiel->index()
+#4 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(126): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(217): Core\Router::invokeObject('Controllers\Pro...')
+#6 C:\xampp\htdocs\zeilschooldewaai\app\Core\routes.php(46): Core\Router::dispatch()
+#7 C:\xampp\htdocs\zeilschooldewaai\index.php(81): require('C:\xampp\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jan 12, 2016 9:41AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Bruijnes', adres='Straatnaam 10', postcode='0000AA', woonplaats='Elburg', telefo' at line 1</p>
+
+           <p><strong>Code:</strong> 42000</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 82</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\zeilschooldewaai\app\Helpers\Database.php(82): PDO->query('UPDATE klanten ...')
+#1 C:\xampp\htdocs\zeilschooldewaai\app\Models\Db.php(58): Helpers\Database->raw('UPDATE klanten ...')
+#2 C:\xampp\htdocs\zeilschooldewaai\app\Controllers\Profiel.php(49): Models\Db->updateUser('9', 'man', 'C', 'Christiaanfsd'', '', 'Bruijnes', 'Straatnaam 10', '0000AA', 'Elburg', '', '', 'christiaanbruij...', '1997-07-16', '1')
+#3 [internal function]: Controllers\Profiel->index()
+#4 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(126): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\zeilschooldewaai\app\Core\Router.php(217): Core\Router::invokeObject('Controllers\Pro...')
+#6 C:\xampp\htdocs\zeilschooldewaai\app\Core\routes.php(46): Core\Router::dispatch()
+#7 C:\xampp\htdocs\zeilschooldewaai\index.php(81): require('C:\xampp\htdocs...')
+#8 {main}</pre>
+
+           <hr />

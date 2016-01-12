@@ -44,7 +44,7 @@ class Login extends Controller
                     }
                     else
                     {
-                        $data["error"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Dit account wordt niet herkent.</strong><br>Uw account is nog niet geactiveerd, check uw mail.</div>';
+                        $data["error"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Activeer uw e-mail.</strong><br>Uw account is nog niet geactiveerd, check uw mail.</div>';
                     }
                 }
                 else
