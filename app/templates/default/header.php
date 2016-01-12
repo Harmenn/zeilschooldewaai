@@ -47,14 +47,16 @@ $hooks->run('afterBody');
 
 <!-- Header -->
 <div id="HeaderImg">
-	<div class="container">
-		<div class="Right" id="socialmedia">
-			<i class="fa fa-facebook-official fa-lg"></i>
-			<i class="fa fa-twitter-square fa-lg"></i>
-			<i class="fa fa-instagram fa-lg"></i>
+	<div id="HeaderMask">
+		<div class="container">
+			<div class="Right" id="socialmedia">
+				<i class="fa fa-facebook-official fa-lg"></i>
+				<i class="fa fa-twitter-square fa-lg"></i>
+				<i class="fa fa-instagram fa-lg"></i>
 
+			</div>
+			<a href="home"><img src="/zeilschooldewaai/app/templates/default/img/logo.png" id="Logo" /></a>
 		</div>
-		<a href="home"><img src="/zeilschooldewaai/app/templates/default/img/logo.png" id="Logo" /></a>
 	</div>
 </div>
 <div id="navbar">
