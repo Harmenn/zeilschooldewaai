@@ -22,6 +22,7 @@ Router::any('boten', 'Controllers\Boten@index');
 
 /* Cursussen sectie */
 Router::any('cursussen', 'Controllers\Cursussen@index');
+Router::any('cursussen', 'Controllers\Cursussen@validatie');
 
 /* User sectie */
 Router::any('login', 'Controllers\Login@index');
@@ -31,7 +32,7 @@ Router::any('activatie', 'Controllers\Registreren@activatie');
 Router::any('profiel', 'Controllers\Profiel@index');
 Router::any('loguit', 'Controllers\Login@loguit');
 
-/* Beheer sectie */
+/* beheer sectie */
 Router::any('beheer', 'Controllers\Beheer@index');
 
 /** Module routes. */
