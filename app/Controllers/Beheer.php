@@ -38,24 +38,28 @@ class Beheer extends Controller
         return $result;
     }
 
-    public function insertData($tabel, $data)
+    public function insertData($tabel, $values)
     {
-        $result = $this->dbBeheer->insertData($tabel);
+        $result = $this->dbBeheer->insertData($tabel, $values);
     }
 
-    public function updateData($tabel, $data)
+    public function updateData($tabel, $values)
     {
-        $result = $this->dbBeheer->updateData($tabel);
+        $result = $this->dbBeheer->updateData($tabel, $values);
     }
 
-    public function deleteData($tabel, $data)
+    public function deleteData($tabel, $where)
     {
-        $result = $this->dbBeheer->updateData($tabel);
+        $result = $this->dbBeheer->updateData($tabel, $where);
     }
 
-    public function index()
+    public function beheer()
     {
-        
+        $data['title'] = $this->language->get('Beheer');
+
+        View::renderTemplate('header', $data);
+        View::render('beheer/beheer', $data);
+        View::renderTemplate('footer', $data);
     }
     
 }

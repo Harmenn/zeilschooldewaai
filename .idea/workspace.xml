@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffb9956d-68e8-4b45-823f-29ea06bedff2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cursussen/validatie.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controllers/Cursussen.php" afterPath="$PROJECT_DIR$/app/Controllers/Cursussen.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controllers/Beheer.php" afterPath="$PROJECT_DIR$/app/Controllers/Beheer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Db.php" afterPath="$PROJECT_DIR$/app/Models/Db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controllers/Login.php" afterPath="$PROJECT_DIR$/app/Controllers/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controllers/Profiel.php" afterPath="$PROJECT_DIR$/app/Controllers/Profiel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controllers/Registreren.php" afterPath="$PROJECT_DIR$/app/Controllers/Registreren.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/beheer/beheer.php" afterPath="$PROJECT_DIR$/app/views/beheer/beheer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errorlog.html" afterPath="$PROJECT_DIR$/errorlog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cursussen/overzicht.php" afterPath="$PROJECT_DIR$/app/views/cursussen/overzicht.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/default/header.php" afterPath="$PROJECT_DIR$/app/templates/default/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user/profiel.php" afterPath="$PROJECT_DIR$/app/views/user/profiel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user/registreren.php" afterPath="$PROJECT_DIR$/app/views/user/registreren.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Core/routes.php" afterPath="$PROJECT_DIR$/app/Core/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/default/js/script.js" afterPath="$PROJECT_DIR$/app/templates/default/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zeilschooldewaai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,8 +47,8 @@
       <file leaf-file-name="Profiel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controllers/Profiel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="27" column="54" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="54" />
+            <state vertical-scroll-proportion="-50.346153">
+              <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -85,19 +88,10 @@
         <entry file="file://$PROJECT_DIR$/app/Models/Db.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.54717">
-              <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+              <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
               <folding>
-                <marker date="1452591407870" expanded="true" signature="218:262" placeholder="SELECT * FRO..klanten..." />
-                <marker date="1452591407870" expanded="true" signature="365:440" placeholder="SELECT wacht..klanten..." />
-                <marker date="1452591407870" expanded="true" signature="691:1186" placeholder="INSERT INTO ..." />
-                <marker date="1452591407870" expanded="true" signature="1295:1343" placeholder="SELECT klant..klanten..." />
-                <marker date="1452591407870" expanded="true" signature="1442:1505" placeholder="UPDATE klant..." />
-                <marker date="1452591407870" expanded="true" signature="1581:1604" placeholder="SELECT * FRO..cursussen..." />
-                <marker date="1452591407870" expanded="true" signature="1739:1753" placeholder="SELECT * FRO..." />
-                <marker date="1452591407870" expanded="true" signature="1861:1875" placeholder="SELECT * FRO..." />
-                <marker date="1452591407870" expanded="true" signature="1983:1997" placeholder="SELECT * FRO..." />
-                <marker date="1452591407870" expanded="true" signature="2105:2119" placeholder="SELECT * FRO..." />
-                <marker date="1452591407870" expanded="true" signature="2223:2270" placeholder="SELECT * FRO..cursussen..." />
+                <marker date="1452593484151" expanded="true" signature="218:262" placeholder="SELECT * FRO..klanten..." />
+                <marker date="1452593484151" expanded="true" signature="2563:2610" placeholder="SELECT * FRO..cursussen..." />
               </folding>
             </state>
           </provider>
@@ -800,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/Profiel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="54" />
+        <state vertical-scroll-proportion="-50.346153">
+          <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -809,19 +803,10 @@
     <entry file="file://$PROJECT_DIR$/app/Models/Db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.54717">
-          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
           <folding>
-            <marker date="1452591407870" expanded="true" signature="218:262" placeholder="SELECT * FRO..klanten..." />
-            <marker date="1452591407870" expanded="true" signature="365:440" placeholder="SELECT wacht..klanten..." />
-            <marker date="1452591407870" expanded="true" signature="691:1186" placeholder="INSERT INTO ..." />
-            <marker date="1452591407870" expanded="true" signature="1295:1343" placeholder="SELECT klant..klanten..." />
-            <marker date="1452591407870" expanded="true" signature="1442:1505" placeholder="UPDATE klant..." />
-            <marker date="1452591407870" expanded="true" signature="1581:1604" placeholder="SELECT * FRO..cursussen..." />
-            <marker date="1452591407870" expanded="true" signature="1739:1753" placeholder="SELECT * FRO..." />
-            <marker date="1452591407870" expanded="true" signature="1861:1875" placeholder="SELECT * FRO..." />
-            <marker date="1452591407870" expanded="true" signature="1983:1997" placeholder="SELECT * FRO..." />
-            <marker date="1452591407870" expanded="true" signature="2105:2119" placeholder="SELECT * FRO..." />
-            <marker date="1452591407870" expanded="true" signature="2223:2270" placeholder="SELECT * FRO..cursussen..." />
+            <marker date="1452593484151" expanded="true" signature="218:262" placeholder="SELECT * FRO..klanten..." />
+            <marker date="1452593484151" expanded="true" signature="2563:2610" placeholder="SELECT * FRO..cursussen..." />
           </folding>
         </state>
       </provider>

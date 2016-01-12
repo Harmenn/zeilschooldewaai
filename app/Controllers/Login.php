@@ -35,9 +35,17 @@ class Login extends Controller
                 $passw = $this->login->pushUsers($user);
                 if ($pass == $passw[0]->wachtwoord) 
                 {
-                    \Helpers\Session::set('username', $user);
-                    \Helpers\Session::set('id', $passw[0]->klant_id);
-                    \Helpers\Url::redirect('home');
+                    if (!$passw[0]->priviledged == 0) 
+                    {
+                        \Helpers\Session::set('username', $user);
+                        \Helpers\Session::set('id', $passw[0]->klant_id);
+                        \Helpers\Session::set('rechten', $passw[0]->priviledged);
+                        \Helpers\Url::redirect('home'); 
+                    }
+                    else
+                    {
+                        $data["error"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Activeer uw e-mail.</strong><br>Uw account is nog niet geactiveerd, check uw mail.</div>';
+                    }
                 }
                 else
                 {
