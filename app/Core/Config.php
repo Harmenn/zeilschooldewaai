@@ -63,7 +63,7 @@ class Config
         define('DB_HOST', 'localhost');
 
         /**
-         * Database name.
+         * Database name.   deb67958_
          */
         define('DB_NAME', 'zeilschooldewaai');
 
