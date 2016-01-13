@@ -2,13 +2,13 @@
 /**
  * Sample layout
  */
-
 use Core\Language;
 if (\Helpers\Session::get('rechten')==3) 
 {
 	?>
     <div class="page-header">
         <h1 style="text-align: center">Beheer</h1>
+<<<<<<< HEAD
     </div>
         <table class="table table-hover">
             <button id="BeheerderToevoegen" class="btn btn-primary">Toevoegen</button>
@@ -52,15 +52,19 @@ if (\Helpers\Session::get('rechten')==3)
             </form>
         </div>
     <?php
+=======
+    </div> 
+ <?php
+    echo $data["users"];
+>>>>>>> f11ba226bdfd609b6ce9bb60801c3cd554bf1453
 }
 elseif(\Helpers\Session::get('rechten')==2)
 {
-	echo "<table class='table table-hover'><thead></thead>".$data["users"]."</table>";
 ?>
 	
-
-<br />
-
+<div class="page-header">
+        <h1 style="text-align: center">Beheer</h1>
+    </div> 
 <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#BeheerProfiel" onclick="ChangeContent('BeheerProfiel')" role="tab" data-toggle="tab">Beheer Profiel</a></li>
@@ -70,12 +74,9 @@ elseif(\Helpers\Session::get('rechten')==2)
         <li role="presentation"><a href="#BeheerInstructeurs" role="tab"  onclick="ChangeContent('BeheerInstructeurs')" data-toggle="tab">Beheer Instructeurs</a></li>
         <li role="presentation"><a href="#CursistKoppelen" role="tab"  onclick="ChangeContent('CursistKoppelen')" data-toggle="tab">Cursist Koppelen</a></li>
     </ul>
-
-
-
-<?php }
+<br />
+<?php echo $data["users"]; }
 else
 {
 	echo "geen rechten";
 }
-

@@ -16,7 +16,7 @@ else{
 
         <form action="" method="post" class="login_form">
         <?php echo $data["error"]; ?>
-            <p><b>E-mail:</b><br /><input class="form-control" type='text' name='username'></p>
+            <p><b>E-mail:</b><br /><input class="form-control" type='text' value='<?php echo $data["user"]; ?>' name='username'></p>
             <p><b>Wachtwoord:</b><br /><input class="form-control" type='password' name='password'></p>
             <br>
             <input class="btn btn-primary" type='submit' name='submit' value='Inloggen'>

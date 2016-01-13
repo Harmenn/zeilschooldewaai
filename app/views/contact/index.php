@@ -46,9 +46,8 @@ use Core\Language;
 					  <button class="btn btn-primary" type="submit">Verzenden</button>
 					</form>
 				<?php 
-			}else{
-				echo '<br><div class="alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Succesvol.</strong><br>Het contactformulier is succesvol verzonden, we nemen binnen 24 uur contact met u op.</div>';
-				
+			}else{	
+				//Mail voor de gebruiker.			
 				$mail = new \Helpers\PhpMailer\Mail();
 				$mail->setFrom('noreply@zeilschooldewaai.nl');
 				$mail->addAddress($email);
@@ -56,7 +55,14 @@ use Core\Language;
 				$mail->body("<h1>Contactformulier</h1><p>U heeft het contactformulier ingevuld.</p>");
 				$mail->send();
 
+				//Mail voor de beheerder.
+				$mail->setFrom('noreply@zeilschooldewaai.nl');
+				$mail->addAddress('beheerder@zeilschooldewaai.nl');
+				$mail->subject('Contactformulier '.$name);
+				$mail->body("<h1>Contactformulier</h1><p>Het bericht:</p> ".$message."om terug te mailen mail ". $email);
+				$mail->send();
 
+				echo '<br><div class="alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Succesvol.</strong><br>Het contactformulier is succesvol verzonden, we nemen binnen 24 uur contact met u op.</div>';
 			}
 		}else{
 			?>

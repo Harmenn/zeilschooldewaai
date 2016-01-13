@@ -16,45 +16,79 @@
     <option value="stap1_inschrijven">Inschrijven</option>
 </select>
 
-<!-- Wat er deze maand laten zien wordt.
------------------------------------------------------------------------------ -->
+<?php
+    function nlDate($datum){ 
+        $datum = str_replace("January", "januari", $datum); 
+        $datum = str_replace("February", "februari", $datum); 
+        $datum = str_replace("March", "maart", $datum); 
+        $datum = str_replace("April", "april", $datum); 
+        $datum = str_replace("May", "mei", $datum); 
+        $datum = str_replace("June", "juni", $datum); 
+        $datum = str_replace("July", "juli", $datum); 
+        $datum = str_replace("August", "augustus", $datum); 
+        $datum = str_replace("September", "september", $datum); 
+        $datum = str_replace("October", "oktober", $datum); 
+        $datum = str_replace("November", "november", $datum); 
+        $datum = str_replace("December", "december", $datum); 
+
+        return $datum; 
+    }
+?>
+
+<!-- Wat er deze maand laten zien wordt. -->
 <div id="Agenda" class="Subject">
     <div class="page-header">
-        <h1 style="text-align: center;">In de planning</h1>
+        <h1 style="text-align: center;">Alle cursussen in de maand <?= nlDate(date('F'));?></h1>
+        <p style="text-align: center;">Bij het tabje inschrijven kunt u alle cursussen zien en daar zich voor inschrijven mits u ingelogd bent.</p>
     </div>
 
-        <div class="AgendaItem">
-            <img src="/zeilschooldewaai/app/templates/default/img/boten/boot1.png" />
-            <h3>Beginners cursus</h3>
-            <p>
-                De cursus zal starten in Week 2, 2016. in deze cursus wordt de basis van zeilen uitgelegd. deze cursus is geschikt voor de leeftijd 6 tot 80 jaar.
-            </p>
-            <div><a href="#agenda"  class="ContentBtn" data-content="beginners" >Meer info</a></div>
-        </div>
-        <div class="AgendaItem">
-            <img src="/zeilschooldewaai/app/templates/default/img/boten/boot2.jpg" />
-            <h3>Wadtocht</h3>
-            <p>
-                Altijd als eens over de waddenzee willen zeilen? dat kan nu. laat u meenemen over de waddenzee voor een week. (deze cursus is geldig in week 3)
-            </p>
-            <div><a  href="#agenda" class="ContentBtn" data-content="wadtochten" >Meer info</a></div>
-        </div>
-        <div class="AgendaItem">
-            <img src="/zeilschooldewaai/app/templates/default/img/boten/boot3.jpg" />
-            <h3>Beginners cursus</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis dis parturient.
-            </p>
-            <div><a  href="#agenda"  class="ContentBtn" data-content="beginners" >Meer info</a></div>
-        </div>
-        
+        <?php
+            $i = 0;
+            foreach($data['CoursesOverzicht'] as $key => $value){
+                $i++;
+                $startdatum = nlDate(date("d F", strtotime($value->startdatum)));
+                $einddatum = nlDate(date("d F", strtotime($value->einddatum)));
+
+                ?>
+                    <div class="AgendaItem">
+                        <?php
+                            if($value->niveau == 0){
+                                echo '<img src="/zeilschooldewaai/app/templates/default/img/boten/boot3.jpg" />';
+                            }elseif($value->niveau == 1){
+                                echo '<img src="/zeilschooldewaai/app/templates/default/img/boten/boot2.jpg" />';
+                            }else{
+                                echo '<img src="/zeilschooldewaai/app/templates/default/img/boten/boot1.png" />';
+                            }
+                        ?>
+                        <h3><?= $value->cursusnaam; ?></h3>
+                        <p><?= $value->cursusomschrijving; ?></p>
+                        <hr>
+                        <p style="text-align:left;">
+                            <b>Prijs:</b> &euro;<?= $value->cursusprijs; ?><br>
+                            <b>Datum:</b> <?= $startdatum; ?> tot <?= $einddatum; ?>
+                            <b>Niveau:</b> 
+                            <?php
+                                if($value->niveau == 0){
+                                    echo 'Beginner';
+                                }elseif($value->niveau == 1){
+                                    echo 'Gevorderde';
+                                }else{
+                                    echo 'Waddentocht';
+                                }
+                            ?>
+                        </p>
+                    </div>
+                <?php
+            }
+
+            if($i == 0){
+                echo '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Geen cursussen.</strong><br>Er zijn momenteel geen cursussen in de maand ' . nlDate(date('F')) .'</div>';
+            }
+        ?>
         <div class="spacer" style="clear: both;"></div>
 </div>
 
-<!-- Uitleg beginners cursus
------------------------------------------------------------------------------ -->
+<!-- Uitleg beginners cursus -->
 <div id="beginners" class="Subject" style="display: none;">
     <div class="col-md-7">
         <div class="page-header">
@@ -82,8 +116,7 @@
     <br />
 </div>
 
-<!-- Uitleg Ervaren cursus
------------------------------------------------------------------------------ -->
+<!-- Uitleg Ervaren cursus -->
 <div id="ervaren" class="Subject" style="display: none;">
     <div class="col-md-7">
         <div class="page-header">
@@ -104,8 +137,7 @@
     <br />
 </div>
 
-<!-- uitleg Wadtochten
------------------------------------------------------------------------------ -->
+<!-- uitleg Wadtochten -->
 <div id="wadtochten" class="Subject" style="display: none">
     <div class="col-md-7">
         <div class="page-header">
@@ -130,22 +162,22 @@
     <br />
 </div>
 
-<!--  Inschrijvingen
------------------------------------------------------------------------------ -->
+<!--  Inschrijvingen -->
 
 <form onsubmit="SubmitForm()" method="post" id="CursusForm" action="">
     <input type="hidden" name="user_id" id="user_id" value="<?php echo \Helpers\Session::get('id'); ?>" />
-    <!-- Stap 1
-    ----------------------------------------------------------------------------- -->
+    <!-- Stap 1 -->
     <div id="stap1_inschrijven" class="Subject" style="display: none">
         <div class="page-header">
-            <h1>Kies een cursus</h1>
+            <h1><?php if(\Helpers\Session::get('id')){ echo '1. Keuze'; }else{ echo 'Geen toegang.';} ?></h1>
         </div>
 
         <?php if (\Helpers\Session::get('id')) { ?>
+            <p>U ziet hier alle aankomende cursussen staan, de cursussen die al geweest zijn staan hier niet bij.</p>
            <button type="button" class="btn btn-success" id="stap1">1. Keuze</button>
             <button type="button" id="stap2" class="btnstap btn btn-default disabled">2. Gegevens</button>
             <button type="button" id="stap3" class="btnstap btn btn-default disabled">3. Overzicht</button>
+            <br><br>
             <table class="table table-hover"  id="CursusTable">
                 <thead>
                     <tr>
@@ -185,11 +217,11 @@
                 </tbody>
             </table>
         <?php } else{ ?>
-            Maak eerst een account aan of log-in voordat je je kunt inschrijven.
+            <div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Geen toegang.</strong><br>U moet eerst ingelogd zijn voordat u zich kan inschrijven.</div>
+
         <?php } ?>
     </div>
-    <!-- Stap 2
-    ----------------------------------------------------------------------------- -->
+    <!-- Stap 2 -->
 
     <div id="stap2_inschrijven" class="Subject" style="display: none">
         <div class="page-header">
@@ -223,8 +255,7 @@
         <br />
 
     </div>
-    <!-- Stap 3
-    ----------------------------------------------------------------------------- -->
+    <!-- Stap 3 -->
 
     <div id="stap3_inschrijven" class="Subject" style="display: none">
         <div class="page-header">
@@ -237,9 +268,9 @@
         <div class="col-md-7">
             <Br />
             <div class="alert alert-success" role="alert">
-                <h2>Gefeliciteerd.</h2>
+                <h2 style="margin-top:0px;">Gefeliciteerd.</h2>
                 <p>
-                    u heeft zich succesvol ingeschreven voor de cursus.
+                    U heeft zich succesvol ingeschreven voor de cursus.
                 </p>
             </div>
             <table class="table">

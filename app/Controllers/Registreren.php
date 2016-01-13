@@ -16,7 +16,7 @@ use Core\Config;
 
 class Registreren extends Controller
 {
-
+    //De variable waar de database model in geladen zal worden.
     private $registreren;
     public function __construct()
     {
@@ -93,7 +93,7 @@ class Registreren extends Controller
                 $email = $_POST['email'];       
                 $niveau = $_POST['niveau'];
                 $geboortedatum = $_POST['date'];
-                //encrypt het wachtwoord.
+                //hashed het wachtwoord.
                 $wachtwoord = sha1($_POST["password"]);
                 $wachtwoord1 = sha1($_POST["password1"]);
                 

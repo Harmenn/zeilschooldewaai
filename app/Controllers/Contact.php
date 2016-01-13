@@ -5,15 +5,8 @@ namespace Controllers;
 use Core\View;
 use Core\Controller;
 
-/**
- * Sample controller showing a construct and 2 methods and their typical usage.
- */
 class Contact extends Controller
 {
-
-    /**
-     * Call the parent construct
-     */
     public function __construct()
     {
         parent::__construct();

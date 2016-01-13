@@ -22,7 +22,7 @@ class Profiel extends Controller
 
     public function removeBadCharacters($s)
     {
-       return str_replace(array('&','<','>','/','\\','"',"'",'?'), '', $s);
+       return str_replace(array('&','<','>','/','\\','"',"'",'?'," "), '', $s);
     }
 
     public function index()
@@ -30,7 +30,7 @@ class Profiel extends Controller
 
         $data['title'] = "Profiel";
         $id = \Helpers\Session::get('id');
-        $data['klant'] = $this->profiel->getUser($id);
+        
 
         if ($_POST['submit-gegevens'])
         {   
@@ -50,9 +50,18 @@ class Profiel extends Controller
                 $email = $this->removeBadCharacters($_POST['email']);       
                 $geboortedatum = $_POST['geboortedatum'];
                 $niveau = $_POST['niveau'];
-                
-                $this->profiel->updateUser($id, $geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau);
-                \Helpers\Url::redirect('profiel');
+
+                //regex van de postcode.
+                $regex = '~\A[1-9]\d{3} ?[a-zA-Z]{2}\z~';
+                if (preg_match($regex, $postcode)) {
+                    $this->profiel->updateUser($id, $geslacht,$voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau);
+                    //\Helpers\Url::redirect('profiel');
+                    $data["melding"] = '<div class="alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Gelukt!</strong><br>Uw gegevens zijn succesvol aangepast.</div>';
+                }
+                else
+                {
+                    $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>De postcode is onjuist</div>';
+                }
             }else{
                 $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>Alle velden moeten ingevuld blijven en er mag geen veld leeg blijven.</div>';
             }
@@ -63,20 +72,23 @@ class Profiel extends Controller
             if(!empty($_POST['wachtwoord']) && !empty($_POST['wachtwoord1']))
             { 
 
-                $wachtwoord = $_POST['wachtwoord'];
-                $wachtwoord1 = $_POST['wachtwoord1'];
+                $wachtwoord = sha1($_POST['wachtwoord']);
+                $wachtwoord1 = sha1($_POST['wachtwoord1']);
 
-                if($wachtwoord == $wachtwoord1){
-                    $wachtwoord = sha1($wachtwoord);
+                if($wachtwoord == $wachtwoord1)
+                {
                     $this->profiel->updateUserPassword($id, $wachtwoord);
                     $data["melding"] = '<div class="alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Gelukt!</strong><br>Uw wachtwoord is succesvol aangepast.</div>';
-                }else{
+                }else
+                {
                     $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>De twee wachtwoorden moeten hetzelfde zijn.</div>';
                 }
             }else{
                 $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>Vul beide wachtwoord velden in.</div>';
             }
-        }        
+        }       
+
+        $data['klant'] = $this->profiel->getUser($id); 
           
         View::renderTemplate('header', $data);
         View::render('user/profiel', $data);

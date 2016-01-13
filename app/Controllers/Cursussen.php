@@ -30,6 +30,7 @@ class Cursussen extends Controller
         $data['home_message'] = $this->language->get('no message');
 
         $data['Courses'] = $this->Database->getAllCourses();
+        $data['CoursesOverzicht'] = $this->Database->getAllCoursesOverzicht();
         View::renderTemplate('header', $data);
         View::render('cursussen/overzicht', $data);
         View::renderTemplate('footer', $data);
@@ -99,7 +100,6 @@ Zeilteam de Waai.
         $mail->subject('Inschrijving cursus: ' . $cursus[0]->cursusnaam);
         $mail->body($body);
         $mail->Send();
-
 
         View::render('cursussen/validatie', $data);
         View::renderTemplate('footer', $data);
