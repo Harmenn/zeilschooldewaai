@@ -48,7 +48,18 @@ elseif(\Helpers\Session::get('rechten')==2)
         <li role="presentation"><a href="#BeheerInstructeurs" role="tab"  onclick="ChangeContent('BeheerInstructeurs')" data-toggle="tab">Beheer Instructeurs</a></li>
         <li role="presentation"><a href="#CursistKoppelen" role="tab"  onclick="ChangeContent('CursistKoppelen')" data-toggle="tab">Cursist Koppelen</a></li>
     </ul>
+<div id="BeheerProfiel" class="Subject">
+    <div class="page-header">
+        <h1 style="text-align: center">Klant beheer</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4 BootType">
+            
+        </div>
 
+
+    </div>
+</div>
 
 
 <?php }
