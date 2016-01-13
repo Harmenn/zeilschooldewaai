@@ -9,4 +9,4 @@ use Core\Language;
 	            <h1>Activatie</h1>
 	    </div>
 
-        Uw account is geactiveerd klik hier om in te loggen
+        Uw account is geactiveerd <a href="login">klik hier</a> om in te loggen.
