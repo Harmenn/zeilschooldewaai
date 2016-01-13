@@ -50,8 +50,13 @@
 
 		public function getAllCourses()
 		{
-			$result = $this->db->select("SELECT * FROM cursussen");
+			$result = $this->db->select("SELECT * FROM cursussen WHERE DATE(startdatum) >= CURDATE()");
 			return $result;
+		}
+
+		public function getAllCoursesOverzicht(){
+			$result = $this->db->select("SELECT * FROM cursussen WHERE MONTH(startdatum) = MONTH(CURDATE())");
+			return $result;			
 		}
 
 		public function updateUser($id, $geslacht, $voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau){

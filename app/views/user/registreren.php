@@ -78,8 +78,8 @@ $hooks = Hooks::get();
                     <p>Niveau <span class="required">*</span>
                         <br />
                         <select id="niveau" name="niveau"  class="form-control">
-                            <option <?php if($_POST['niveau'] == "Beginner"){ echo 'selected'; } ?> value="Beginner">Beginner</option>
-                            <option <?php if($_POST['niveau'] == "Gevorderd"){ echo 'selected'; } ?>  value="Gevorderd">Gevorderd</option>
+                            <option <?php if($_POST['niveau'] == "1"){ echo 'selected'; } ?> value="1">Beginner</option>
+                            <option <?php if($_POST['niveau'] == "2"){ echo 'selected'; } ?>  value="2">Gevorderd</option>
                         </select>
                     </p>
                 </div>

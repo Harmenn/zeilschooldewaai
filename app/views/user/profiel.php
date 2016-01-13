@@ -49,9 +49,8 @@ if (\Helpers\Session::get('id')) {
 								  <label for="<?php echo $key; ?>" class="col-sm-2 control-label"><?php echo ucfirst($key); ?> <span class="required">*</span></label>
 								  <div class="col-sm-10">
 								    <select class="form-control" id="<?php echo $key; ?>" name="<?php echo $key; ?>">
-								      <option value="1" <?php if($value == "1"){ echo "selected"; } ?> >1</option>
-								      <option value="2" <?php if($value == "2"){ echo "selected"; } ?>>2</option>
-								      <option value="3" <?php if($value == "3"){ echo "selected"; } ?>>3</option>
+								        <option <?php if($value == "1"){ echo 'selected'; } ?> value="1">Beginner</option>
+								        <option <?php if($value == "2"){ echo 'selected'; } ?>  value="2">Gevorderd</option>
 								    </select>
 								  </div>
 								</div>							

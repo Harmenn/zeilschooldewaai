@@ -107,6 +107,7 @@ class Config
          * Set timezone.
          */
         date_default_timezone_set('Europe/London');
+        
 
         /**
          * Start sessions.

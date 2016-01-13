@@ -30,6 +30,7 @@ class Cursussen extends Controller
         $data['home_message'] = $this->language->get('no message');
 
         $data['Courses'] = $this->Database->getAllCourses();
+        $data['CoursesOverzicht'] = $this->Database->getAllCoursesOverzicht();
         View::renderTemplate('header', $data);
         View::render('cursussen/overzicht', $data);
         View::renderTemplate('footer', $data);
