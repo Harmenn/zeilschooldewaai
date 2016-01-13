@@ -2,22 +2,23 @@
 /**
  * Sample layout
  */
-
 use Core\Language;
 if (\Helpers\Session::get('rechten')==3) 
 {
 	?>
     <div class="page-header">
         <h1 style="text-align: center">Beheer</h1>
-    </div>
-       
-    <?php
+    </div> 
+ <?php
+    echo $data["users"];
 }
 elseif(\Helpers\Session::get('rechten')==2)
 {
-	
 ?>
-
+	
+<div class="page-header">
+        <h1 style="text-align: center">Beheer</h1>
+    </div> 
 <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#BeheerProfiel" onclick="ChangeContent('BeheerProfiel')" role="tab" data-toggle="tab">Beheer Profiel</a></li>
@@ -27,21 +28,9 @@ elseif(\Helpers\Session::get('rechten')==2)
         <li role="presentation"><a href="#BeheerInstructeurs" role="tab"  onclick="ChangeContent('BeheerInstructeurs')" data-toggle="tab">Beheer Instructeurs</a></li>
         <li role="presentation"><a href="#CursistKoppelen" role="tab"  onclick="ChangeContent('CursistKoppelen')" data-toggle="tab">Cursist Koppelen</a></li>
     </ul>
-<div id="BeheerProfiel" class="Subject">
-    <div class="page-header">
-        <h1 style="text-align: center">Klant beheer</h1>
-    </div>
-    <div class="row">
-        <div class="col-md-4 BootType">
-            
-        </div>
-    </div>
-</div>
-
-
-<?php }
+<br />
+<?php echo $data["users"]; }
 else
 {
 	echo "geen rechten";
 }
-
