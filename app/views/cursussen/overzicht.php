@@ -138,8 +138,7 @@
     <br />
 </div>
 
-<!-- uitleg Wadtochten
------------------------------------------------------------------------------ -->
+<!-- uitleg Wadtochten -->
 <div id="wadtochten" class="Subject" style="display: none">
     <div class="col-md-7">
         <div class="page-header">
@@ -220,10 +219,10 @@
             </table>
         <?php } else{ ?>
             <div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Geen toegang.</strong><br>U moet eerst ingelogd zijn voordat u zich kan inschrijven.</div>
+
         <?php } ?>
     </div>
-    <!-- Stap 2
-    ----------------------------------------------------------------------------- -->
+    <!-- Stap 2 -->
 
     <div id="stap2_inschrijven" class="Subject" style="display: none">
         <div class="page-header">
@@ -257,8 +256,7 @@
         <br />
 
     </div>
-    <!-- Stap 3
-    ----------------------------------------------------------------------------- -->
+    <!-- Stap 3 -->
 
     <div id="stap3_inschrijven" class="Subject" style="display: none">
         <div class="page-header">
