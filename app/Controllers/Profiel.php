@@ -72,14 +72,15 @@ class Profiel extends Controller
             if(!empty($_POST['wachtwoord']) && !empty($_POST['wachtwoord1']))
             { 
 
-                $wachtwoord = $_POST['wachtwoord'];
-                $wachtwoord1 = $_POST['wachtwoord1'];
+                $wachtwoord = sha1($_POST['wachtwoord']);
+                $wachtwoord1 = sha1($_POST['wachtwoord1']);
 
-                if($wachtwoord == $wachtwoord1){
-                    $wachtwoord = sha1($wachtwoord);
+                if($wachtwoord == $wachtwoord1)
+                {
                     $this->profiel->updateUserPassword($id, $wachtwoord);
                     $data["melding"] = '<div class="alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Gelukt!</strong><br>Uw wachtwoord is succesvol aangepast.</div>';
-                }else{
+                }else
+                {
                     $data["melding"] = '<div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Er is een fout opgetreden.</strong><br>De twee wachtwoorden moeten hetzelfde zijn.</div>';
                 }
             }else{
