@@ -54,6 +54,7 @@ class Login extends Controller
             }
             
         }
+        $data["user"] = $user;
         View::renderTemplate('header', $data);
         View::render('user/login', $data);
         View::renderTemplate('footer', $data);
