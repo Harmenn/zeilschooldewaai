@@ -1,4 +1,5 @@
 <?php
+echo "Deze site is gekopieerd van het internet.";
 /**
  * SimpleMVC specifed directory default is '.'
  * If app folder is not in the same directory update it's path
