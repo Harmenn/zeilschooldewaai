@@ -9,35 +9,17 @@ if (\Helpers\Session::get('rechten')==3)
 	?>
     <div class="page-header">
         <h1 style="text-align: center">Beheer</h1>
-    </div>
-        <table class="table table-hover">
-            <button id="toevoegen" class="btn btn-primary">toevoegen</button>
-            <thead>
-                <tr>
-                    <th>Voornaam</th>
-                    <th>Tussenvoegsel</th>
-                    <th>Achternaam</th>
-                    <th>E-mail</th>    
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
+    </div> 
  <?php
-                    echo $data["users"];
-                        
-                    ?>
-
-                </tbody>
-        </table>
-    <?php
+    echo $data["users"];
 }
 elseif(\Helpers\Session::get('rechten')==2)
 {
-	echo "<table class='table table-hover'><thead></thead>".$data["users"]."</table>";
 ?>
 	
-
-<br />
+<div class="page-header">
+        <h1 style="text-align: center">Beheer</h1>
+    </div> 
 
 <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -49,9 +31,9 @@ elseif(\Helpers\Session::get('rechten')==2)
         <li role="presentation"><a href="#CursistKoppelen" role="tab"  onclick="ChangeContent('CursistKoppelen')" data-toggle="tab">Cursist Koppelen</a></li>
     </ul>
 
+<br />
 
-
-<?php }
+<?php echo $data["users"]; }
 else
 {
 	echo "geen rechten";
