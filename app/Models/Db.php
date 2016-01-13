@@ -4,20 +4,24 @@
 
 	use Core\Model;
 
-	class Db extends Model {
+	class Db extends Model 
+	{
 		protected $db;
 
-		public function __construct(){
+		public function __construct()
+		{
 			parent::__construct();
 		}
 
-		public function getUser($id){
+		public function getUser($id)
+		{
 			$result = $this->db->select("SELECT * FROM klanten WHERE klant_id = '$id'");
 			
 			return $result;
 		}
 
-		public function checkEmail($email){
+		public function checkEmail($email)
+		{
 			$result = $this->db->select("SELECT email FROM klanten WHERE email = '$email'");
 			
 			return $result;
@@ -51,49 +55,47 @@
 		public function getAllCourses()
 		{
 			$result = $this->db->select("SELECT * FROM cursussen");
+			
 			return $result;
 		}
 
-		public function updateUser($id, $geslacht, $voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau){
+		public function updateUser($id, $geslacht, $voorletters, $voornaam, $tussenvoegsel, $achternaam, $adres, $postcode, $woonplaats, $telefoonnummer, $mobiel, $email, $geboortedatum, $niveau)
+		{
 			$this->db->raw("UPDATE klanten SET geslacht='$geslacht', voorletters='$voorletters', voornaam='$voornaam', tussenvoegsel='$tussenvoegsel', achternaam='$achternaam', adres='$adres', postcode='$postcode', woonplaats='$woonplaats', telefoonnummer='$telefoonnummer', mobiel='$mobiel', email='$email', geboortedatum='$geboortedatum', niveau='$niveau' WHERE klant_id='$id';");		
 		}
 
-		public function updateUserPassword($id, $wachtwoord){
+		public function updateUserPassword($id, $wachtwoord)
+		{
 			$this->db->raw("UPDATE klanten SET wachtwoord='$wachtwoord' WHERE klant_id='$id';");
 		}
 
-		public function getCursus($id){
+		public function getCursus($id)
+		{
 			$result = $this->db->select("SELECT * FROM cursussen WHERE cursus_id = '$id'");
 
 			return $result;
 		}
 
 		//Beheer controller database acties.
-		public function userData($tabel){
+		public function userData($tabel)
+		{
 			$result = $this->db->select("SELECT * FROM $tabel");
 			
 			return $result;
-            
 		}
 
-		public function insertData($tabel, $values){
+		public function insertData($tabel, $values)
+		{
 			$result = $this->db->raw("INSERT INTO $tabel VALUES ($values)");
-			
-
-			return $result;
-
 		}
 
-		public function updateData($tabel, $values){
+		public function updateData($tabel, $values)
+		{
 			$result = $this->db->raw("UPDATE $tabel SET $values");
-			
-			return $result;
 		}
 
-		public function deleteData($tabel, $where){
+		public function deleteData($tabel, $where)
+		{
 			$result = $this->db->delete($tabel, $where);
-			
-			return $result;
 		}
-
 	}
