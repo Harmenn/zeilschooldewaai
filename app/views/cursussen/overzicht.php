@@ -116,8 +116,7 @@
     <br />
 </div>
 
-<!-- Uitleg Ervaren cursus
------------------------------------------------------------------------------ -->
+<!-- Uitleg Ervaren cursus -->
 <div id="ervaren" class="Subject" style="display: none;">
     <div class="col-md-7">
         <div class="page-header">
