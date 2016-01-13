@@ -22,7 +22,7 @@ class Profiel extends Controller
 
     public function removeBadCharacters($s)
     {
-       return str_replace(array('&','<','>','/','\\','"',"'",'?'), '', $s);
+       return str_replace(array('&','<','>','/','\\','"',"'",'?'," "), '', $s);
     }
 
     public function index()

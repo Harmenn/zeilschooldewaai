@@ -185,7 +185,7 @@
                 </tbody>
             </table>
         <?php } else{ ?>
-            Maak eerst een account aan of log-in voordat je je kunt inschrijven.
+            Maak eerst een account aan of log in voordat je je kunt inschrijven.
         <?php } ?>
     </div>
     <!-- Stap 2
